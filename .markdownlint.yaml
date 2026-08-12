@@ -30,3 +30,12 @@ MD041: false
 
 # Allow heading levels to increment by more than one (e.g., h1 to h3)
 MD001: false
+
+# Disable multiple consecutive blank lines check
+MD012: false
+
+# Disable single title / single h1 check
+MD025: false
+
+# Disable emphasis as heading check
+MD036: false

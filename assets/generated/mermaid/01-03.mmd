@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Email_Inbox["Email Inbox"]
+    N2_AWS_Textract["AWS Textract"]
+    N3_Oracle["Oracle"]
+    N4_DocuSign["DocuSign"]
+    N0_Webhook_Trigger --> N1_Email_Inbox
+    N1_Email_Inbox --> N2_AWS_Textract
+    N2_AWS_Textract --> N3_Oracle
+    N3_Oracle --> N4_DocuSign

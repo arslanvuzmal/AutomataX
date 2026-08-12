@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Mixpanel["Mixpanel"]
+    N2_Intercom["Intercom"]
+    N3_Google_Slides_API["Google Slides API"]
+    N4_Email["Email"]
+    N0_Webhook_Trigger --> N1_Mixpanel
+    N1_Mixpanel --> N2_Intercom
+    N2_Intercom --> N3_Google_Slides_API
+    N3_Google_Slides_API --> N4_Email

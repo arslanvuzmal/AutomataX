@@ -1,0 +1,14 @@
+{
+  "totalWorkflows": 100,
+  "totalDomains": 10,
+  "uniqueIntegrations": 197,
+  "aiEnabledWorkflows": 32,
+  "webhookTriggers": 100,
+  "scheduledTriggers": 0,
+  "humanInTheLoopWorkflows": 11,
+  "maturityDistribution": {
+    "demoVerified": 15,
+    "architectureBlueprint": 85
+  },
+  "lastUpdated": "2026-08-12"
+}

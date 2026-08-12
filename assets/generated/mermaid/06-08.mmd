@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Slackbot["Slackbot"]
+    N2_Okta_MFA["Okta MFA"]
+    N3_Active_Directory["Active Directory"]
+    N4_Email["Email"]
+    N0_Webhook_Trigger --> N1_Slackbot
+    N1_Slackbot --> N2_Okta_MFA
+    N2_Okta_MFA --> N3_Active_Directory
+    N3_Active_Directory --> N4_Email

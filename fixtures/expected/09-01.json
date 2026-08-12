@@ -1,0 +1,7 @@
+{
+  "self_healing_attempted": true,
+  "action_taken": "RESTARTED_JOB_WITH_BACKOFF",
+  "retry_success": true,
+  "slack_digest_sent": true,
+  "status": "RESOLVED_AUTO"
+}

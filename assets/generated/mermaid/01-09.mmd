@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Xero["Xero"]
+    N2_Python["Python"]
+    N3_Excel_generation["Excel generation"]
+    N4_Secure_Email["Secure Email"]
+    N0_Webhook_Trigger --> N1_Xero
+    N1_Xero --> N2_Python
+    N2_Python --> N3_Excel_generation
+    N3_Excel_generation --> N4_Secure_Email

@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Facebook_Lead_Ads["Facebook Lead Ads"]
+    N2_HubSpot["HubSpot"]
+    N3_SMS_API["SMS API"]
+    N0_Webhook_Trigger --> N1_Facebook_Lead_Ads
+    N1_Facebook_Lead_Ads --> N2_HubSpot
+    N2_HubSpot --> N3_SMS_API

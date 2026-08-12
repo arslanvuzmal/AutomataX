@@ -1,0 +1,12 @@
+{
+  "google_workspace_created": true,
+  "okta_provisioned": true,
+  "slack_channels_joined": [
+    "#engineering",
+    "#welcome",
+    "#cloud-arch"
+  ],
+  "hardware_order_submitted": true,
+  "onboarding_doc_sent": true,
+  "status": "ONBOARDED"
+}

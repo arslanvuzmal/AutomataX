@@ -1,0 +1,6 @@
+{
+  "pipeline_id": "ETL-MAIN-CUSTOMER-SYNC",
+  "job_run_id": "RUN-8819",
+  "error_code": "DB_DEADLOCK_DETECTED",
+  "failed_at": "2026-08-12T22:10:00Z"
+}

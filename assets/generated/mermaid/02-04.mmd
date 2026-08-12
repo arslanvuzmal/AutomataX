@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Lattice["Lattice"]
+    N2_Slack["Slack"]
+    N3_Notion["Notion"]
+    N4_Sentiment_Analysis_AI["Sentiment Analysis AI"]
+    N0_Webhook_Trigger --> N1_Lattice
+    N1_Lattice --> N2_Slack
+    N2_Slack --> N3_Notion
+    N3_Notion --> N4_Sentiment_Analysis_AI

@@ -1,0 +1,7 @@
+{
+  "github_access_logs_collected": true,
+  "aws_iam_policies_exported": true,
+  "jira_change_tickets_verified": true,
+  "evidence_vault_s3_path": "s3://soc2-vault-internal/2026-Q3/evidence-pack.zip",
+  "auditor_digest_sent": true
+}

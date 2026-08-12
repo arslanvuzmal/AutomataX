@@ -1,0 +1,7 @@
+{
+  "war_room_channel": "#incident-sev1-payment-gateway-3091",
+  "zoom_link": "https://zoom.internal/j/991204858",
+  "jira_incident_key": "INC-4412",
+  "pagerduty_incident_id": "PD-9921",
+  "incident_commander": "On-Call Lead"
+}

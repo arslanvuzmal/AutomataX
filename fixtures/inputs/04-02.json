@@ -1,0 +1,7 @@
+{
+  "ticket_id": "TCK-88192",
+  "customer_tier": "Enterprise",
+  "subject": "Production API Timeout Error on Endpoint /v2/batch",
+  "body": "Urgent: Our ETL jobs are failing with HTTP 504 Gateway Timeout since 14:00 UTC.",
+  "user_email": "devops@enterprise-client.com"
+}

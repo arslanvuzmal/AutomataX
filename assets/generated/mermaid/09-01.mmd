@@ -1,0 +1,6 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Fivetran_Airbyte_Webhooks["Fivetran/Airbyte Webhooks"]
+    N2_PagerDuty["PagerDuty"]
+    N0_Webhook_Trigger --> N1_Fivetran_Airbyte_Webhooks
+    N1_Fivetran_Airbyte_Webhooks --> N2_PagerDuty

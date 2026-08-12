@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Avalara["Avalara"]
+    N2_Headless_Checkout_API["Headless Checkout API"]
+    N3_Workday["Workday"]
+    N0_Webhook_Trigger --> N1_Avalara
+    N1_Avalara --> N2_Headless_Checkout_API
+    N2_Headless_Checkout_API --> N3_Workday

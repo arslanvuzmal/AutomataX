@@ -1,0 +1,7 @@
+{
+  "circuit_breaker_tripped": true,
+  "downstream_pipeline_halted": true,
+  "incident_ticket_key": "DATA-9912",
+  "slack_alert_sent": true,
+  "reason": "NULL percentage for customer_id (12.4%) exceeded safety threshold (1.0%)"
+}

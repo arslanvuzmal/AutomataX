@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Notion["Notion"]
+    N2_Email["Email"]
+    N3_Reporting_Logic["Reporting Logic"]
+    N0_Webhook_Trigger --> N1_Notion
+    N1_Notion --> N2_Email
+    N2_Email --> N3_Reporting_Logic
