@@ -24,7 +24,7 @@ jobs:
       run: npm install
 
     - name: Lint Markdown Files
-      uses: DavidAnson/markdownlint-cli2-action@v15
+      uses: DavidAnson/markdownlint-cli2-action@v24
       with:
         globs: '**/*.md'
 
