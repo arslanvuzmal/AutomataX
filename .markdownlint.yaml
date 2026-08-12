@@ -36,3 +36,6 @@ MD012: false
 
 # Disable single title / single h1 check
 MD025: false
+
+# Disable emphasis as heading check
+MD036: false
