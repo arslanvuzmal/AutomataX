@@ -95,10 +95,8 @@ Expected incoming fields include:
 
 ## Error Handling
 
-
 - **Recommended Hardening**: Implement Error Trigger nodes and exponential retry policies on HTTP integration nodes.
 - **Dead-Letter Handling**: Log failed executions to a queue for manual retry.
-
 
 ---
 
@@ -131,9 +129,7 @@ Expected incoming fields include:
 
 ## Test / Demo
 
-
 - **Blueprint Scenario**: Supply a mock JSON payload matching the trigger schema to test workflow node routing in test mode.
-
 
 ---
 

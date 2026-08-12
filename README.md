@@ -142,7 +142,7 @@ Importing an AutomataX workflow into your n8n workspace takes under 60 seconds:
 
 ## 🛠 Developer & Contribution Tools
 
-\`\`\`bash
+```bash
 # Validate repository integrity (JSON, manifest sync, links, secret scanning)
 npm test
 
@@ -154,13 +154,13 @@ npm run generate:diagrams
 
 # Regenerate documentation pages & stats
 npm run generate:docs && npm run generate:stats
-\`\`\`
+```
 
 ---
 
 ## 📁 Repository Structure
 
-\`\`\`text
+```text
 AutomataX/
 ├── assets/                  # Brand & visual architecture SVGs
 │   ├── brand/              # Hero & system architecture SVGs

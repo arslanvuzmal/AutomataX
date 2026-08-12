@@ -93,11 +93,9 @@ Expected incoming fields include:
 
 ## Error Handling
 
-
 - **Active Retries**: Configured with exponential backoff on HTTP/API node failures.
 - **Error Trigger Node**: Routes unhandled exceptions to an error workflow.
 - **Alert Dispatch**: Dispatches failure alerts to designated Slack/PagerDuty channels.
-
 
 ---
 
@@ -129,11 +127,9 @@ Expected incoming fields include:
 
 ## Test / Demo
 
-
 - **Fixture Input**: `fixtures/inputs/08-07.json`
 - **Expected Result**: `fixtures/expected/08-07.json`
 - **Execution Test**: Trigger the workflow with mock input payload to verify node execution paths without production API keys.
-
 
 ---
 

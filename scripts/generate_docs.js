@@ -181,7 +181,8 @@ Before deploying to production:
 `;
 
   const docFilePath = path.join(ROOT_DIR, wf.documentation);
-  fs.writeFileSync(docFilePath, docContent, 'utf8');
+  const cleanContent = docContent.replace(/\n{3,}/g, '\n\n');
+  fs.writeFileSync(docFilePath, cleanContent, 'utf8');
 });
 
 console.log(`Generated 100 workflow documentation files under docs/workflows/.`);
