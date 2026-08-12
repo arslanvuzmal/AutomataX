@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_POS_System["POS System"]
+    N2_Python_Scripting["Python Scripting"]
+    N3_MES["MES"]
+    N0_Webhook_Trigger --> N1_POS_System
+    N1_POS_System --> N2_Python_Scripting
+    N2_Python_Scripting --> N3_MES

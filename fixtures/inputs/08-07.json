@@ -1,0 +1,9 @@
+{
+  "audit_period": "2026-Q3",
+  "evidence_controls": [
+    "CC6.1",
+    "CC6.8",
+    "CC7.2"
+  ],
+  "collector_id": "SOC2-AUTO-COLLECT"
+}

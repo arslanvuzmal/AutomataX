@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_BambooHR["BambooHR"]
+    N2_PDFMonkey["PDFMonkey"]
+    N3_Asana["Asana"]
+    N0_Webhook_Trigger --> N1_BambooHR
+    N1_BambooHR --> N2_PDFMonkey
+    N2_PDFMonkey --> N3_Asana

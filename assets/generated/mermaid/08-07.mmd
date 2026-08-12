@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Okta["Okta"]
+    N2_GitHub["GitHub"]
+    N3_AWS["AWS"]
+    N4_Vanta__or_similar_["Vanta (or similar)"]
+    N0_Webhook_Trigger --> N1_Okta
+    N1_Okta --> N2_GitHub
+    N2_GitHub --> N3_AWS
+    N3_AWS --> N4_Vanta__or_similar_

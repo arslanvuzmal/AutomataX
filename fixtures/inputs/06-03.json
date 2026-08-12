@@ -1,0 +1,7 @@
+{
+  "build_id": "BUILD-99824",
+  "repository": "automatax-core",
+  "branch": "main",
+  "failed_step": "E2E Integration Tests",
+  "log_snippet": "FAIL: Connection refused at postgres:5432 during migration step 4"
+}

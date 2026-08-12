@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Salesforce["Salesforce"]
+    N2_Slack_Teams["Slack/Teams"]
+    N3_ERP__Margin_Data_["ERP (Margin Data)"]
+    N0_Webhook_Trigger --> N1_Salesforce
+    N1_Salesforce --> N2_Slack_Teams
+    N2_Slack_Teams --> N3_ERP__Margin_Data_

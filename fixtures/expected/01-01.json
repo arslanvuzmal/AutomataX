@@ -1,0 +1,8 @@
+{
+  "status": "SUCCESS",
+  "usd_equivalent": 16940,
+  "fx_rate_applied": 1.1,
+  "erp_posting_status": "RECOGNIZED",
+  "slack_notification_sent": true,
+  "report_url": "https://documint.internal/reports/REV-2026-08-12.pdf"
+}

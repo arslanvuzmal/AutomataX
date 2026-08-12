@@ -1,0 +1,14 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_DocuSign["DocuSign"]
+    N2_Okta["Okta"]
+    N3_SnipeIT["SnipeIT"]
+    N4_Slack["Slack"]
+    N5_Calendly["Calendly"]
+    N6_Lattice["Lattice"]
+    N0_Webhook_Trigger --> N1_DocuSign
+    N1_DocuSign --> N2_Okta
+    N2_Okta --> N3_SnipeIT
+    N3_SnipeIT --> N4_Slack
+    N4_Slack --> N5_Calendly
+    N5_Calendly --> N6_Lattice

@@ -1,0 +1,8 @@
+{
+  "trigger_po": true,
+  "calculated_po_quantity": 450,
+  "vendor_id": "VEND-302",
+  "po_number": "PO-AUTO-9912",
+  "netsuite_status": "CREATED",
+  "slack_alert_sent": true
+}

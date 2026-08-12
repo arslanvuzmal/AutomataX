@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_News_API["News API"]
+    N2_Slack["Slack"]
+    N3_BI_Tool__e_g___Looker_["BI Tool (e.g., Looker)"]
+    N4_Email_SMS["Email/SMS"]
+    N0_Webhook_Trigger --> N1_News_API
+    N1_News_API --> N2_Slack
+    N2_Slack --> N3_BI_Tool__e_g___Looker_
+    N3_BI_Tool__e_g___Looker_ --> N4_Email_SMS

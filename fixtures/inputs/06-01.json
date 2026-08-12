@@ -1,0 +1,7 @@
+{
+  "alert_id": "ALT-3091",
+  "severity": "SEV-1",
+  "service": "Payment Gateway Core",
+  "summary": "Database Connection Pool Exhaustion in us-east-1",
+  "triggering_system": "Datadog"
+}

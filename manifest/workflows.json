@@ -1,0 +1,3022 @@
+[
+  {
+    "id": "01-01",
+    "slug": "multi-currency-revenue-recognition-reporting",
+    "name": "Multi-Currency Revenue Recognition & Reporting",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Finance teams waste hours manually fetching daily FX rates, reconciling discrepancies across global sales, and compiling month-end reports, leading to delayed revenue recognition and compliance risks.",
+    "businessOutcome": "Build an n8n workflow connecting SAP ERP, Stripe, and Salesforce to automate multi-currency revenue recognition, including automated daily FX rate fetching via API, discrepancy flagging in Slack, and generating a monthly PDF report via Documint.",
+    "originalFilename": "01_01_multi_currency_revenue_recognition_reporting.json",
+    "workflow": "workflows/01-finops/01_01_multi_currency_revenue_recognition_reporting.json",
+    "documentation": "docs/workflows/01-01-multi-currency-revenue-recognition-reporting.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "SAP ERP",
+      "Stripe",
+      "Salesforce",
+      "Documint",
+      "Slack"
+    ],
+    "credentials": [
+      "SAP ERP API Credentials",
+      "Stripe API Credentials",
+      "Salesforce API Credentials",
+      "Documint API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "01-02",
+    "slug": "automated-budget-vs-actuals-cloud-cost-monitoring",
+    "name": "Automated Budget vs. Actuals Cloud Cost Monitoring",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Cloud spend often spirals out of control before FinOps can catch it. Manual comparison between AWS bills and NetSuite budgets is too slow for agile cost management.",
+    "businessOutcome": "Design a workflow that monitors AWS Cost Explorer API, compares actuals vs. budgeted spend in NetSuite, and automatically triggers a Jira ticket for the FinOps team if variance exceeds 5%, including a Slack summary.",
+    "originalFilename": "01_02_automated_budget_vs_actuals_cloud_cost_monitoring.json",
+    "workflow": "workflows/01-finops/01_02_automated_budget_vs_actuals_cloud_cost_monitoring.json",
+    "documentation": "docs/workflows/01-02-automated-budget-vs-actuals-cloud-cost-monitoring.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "AWS Cost Explorer",
+      "NetSuite",
+      "Jira",
+      "Slack"
+    ],
+    "credentials": [
+      "AWS Cost Explorer API Credentials",
+      "NetSuite API Credentials",
+      "Jira API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-03",
+    "slug": "intelligent-accounts-payable-automation",
+    "name": "Intelligent Accounts Payable Automation",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Processing hundreds of inbound invoices manually is prone to human error, missed PO matching, and delayed payment approvals, straining vendor relationships.",
+    "businessOutcome": "Create an automated accounts payable workflow that ingests invoices from a dedicated email inbox, uses OCR (via AWS Textract) to extract line items, matches them against POs in Oracle, and routes for multi-tier approval in DocuSign based on amount thresholds.",
+    "originalFilename": "01_03_intelligent_accounts_payable_automation.json",
+    "workflow": "workflows/01-finops/01_03_intelligent_accounts_payable_automation.json",
+    "documentation": "docs/workflows/01-03-intelligent-accounts-payable-automation.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Email Inbox",
+      "AWS Textract",
+      "Oracle",
+      "DocuSign"
+    ],
+    "credentials": [
+      "Email Inbox API Credentials",
+      "AWS Textract API Credentials",
+      "Oracle API Credentials",
+      "DocuSign API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": true,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "01-04",
+    "slug": "dynamic-subscription-dunning-retention",
+    "name": "Dynamic Subscription Dunning & Retention",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Failed payments lead to involuntary churn. Handling collections manually is inefficient and results in poor customer experiences when services are cut without proper warning.",
+    "businessOutcome": "Build a subscription dunning workflow integrating Stripe, Intercom, and Salesforce: on failed payment, pause service via API, trigger a personalized SMS/Email sequence, update CRM opportunity stage, and create a high-priority support ticket if unresolved in 48 hours.",
+    "originalFilename": "01_04_dynamic_subscription_dunning_retention.json",
+    "workflow": "workflows/01-finops/01_04_dynamic_subscription_dunning_retention.json",
+    "documentation": "docs/workflows/01-04-dynamic-subscription-dunning-retention.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Stripe",
+      "Intercom",
+      "Salesforce",
+      "SMS/Email API"
+    ],
+    "credentials": [
+      "Stripe API Credentials",
+      "Intercom API Credentials",
+      "Salesforce API Credentials",
+      "SMS/Email API API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-05",
+    "slug": "omnichannel-sales-aggregation-data-warehousing",
+    "name": "Omnichannel Sales Aggregation & Data Warehousing",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Aggregating daily sales data across multiple platforms (Shopify, Amazon, custom portals) for accurate BI analysis is tedious and requires constant data engineering overhead.",
+    "businessOutcome": "Design a workflow that aggregates daily sales data from Shopify, Amazon, and custom APIs, transforms it using complex JavaScript nodes, and pushes it to a Snowflake data warehouse via SFTP, triggering a dbt run upon completion.",
+    "originalFilename": "01_05_omnichannel_sales_aggregation_data_warehousing.json",
+    "workflow": "workflows/01-finops/01_05_omnichannel_sales_aggregation_data_warehousing.json",
+    "documentation": "docs/workflows/01-05-omnichannel-sales-aggregation-data-warehousing.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Shopify",
+      "Amazon",
+      "Snowflake",
+      "dbt",
+      "SFTP"
+    ],
+    "credentials": [
+      "Shopify API Credentials",
+      "Amazon API Credentials",
+      "Snowflake API Credentials",
+      "dbt API Credentials",
+      "SFTP API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-06",
+    "slug": "corporate-card-expense-reconciliation",
+    "name": "Corporate Card Expense Reconciliation",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Employees delay submitting receipts, and finance struggles to match them against corporate card statements, creating massive backlogs at month-end.",
+    "businessOutcome": "Create an automated expense reconciliation workflow that pulls corporate card transactions from Brex, matches them against receipts uploaded to a SharePoint folder using AI vision, and posts approved entries to QuickBooks Online.",
+    "originalFilename": "01_06_corporate_card_expense_reconciliation.json",
+    "workflow": "workflows/01-finops/01_06_corporate_card_expense_reconciliation.json",
+    "documentation": "docs/workflows/01-06-corporate-card-expense-reconciliation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Brex",
+      "SharePoint",
+      "AI Vision",
+      "QuickBooks Online"
+    ],
+    "credentials": [
+      "Brex API Credentials",
+      "SharePoint API Credentials",
+      "AI Vision API Credentials",
+      "QuickBooks Online API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-07",
+    "slug": "crypto-treasury-real-time-p-l-tracking",
+    "name": "Crypto Treasury Real-Time P&L Tracking",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Managing corporate crypto treasuries requires constant monitoring. Sudden market shifts can cause massive unnotified losses without real-time tracking systems in place.",
+    "businessOutcome": "Build a workflow that monitors crypto treasury wallets via Etherscan API, calculates daily P&L based on real-time oracle prices, and updates a Notion dashboard while alerting the CFO via PagerDuty if daily loss exceeds a set threshold.",
+    "originalFilename": "01_07_crypto_treasury_real_time_p_l_tracking.json",
+    "workflow": "workflows/01-finops/01_07_crypto_treasury_real_time_p_l_tracking.json",
+    "documentation": "docs/workflows/01-07-crypto-treasury-real-time-p-l-tracking.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Etherscan API",
+      "Notion",
+      "PagerDuty"
+    ],
+    "credentials": [
+      "Etherscan API API Credentials",
+      "Notion API Credentials",
+      "PagerDuty API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-08",
+    "slug": "fraud-resistant-vendor-payment-gateway",
+    "name": "Fraud-Resistant Vendor Payment Gateway",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Vendor bank detail spoofing is a common fraud vector. Verifying payment details and compiling bank transfer files manually exposes the company to massive financial risk.",
+    "businessOutcome": "Design a vendor payment automation workflow that pulls approved invoices from Coupa, checks vendor bank details against a sanitized fraud database, formats BACS/ACH files, and uploads them to the banking portal via SFTP.",
+    "originalFilename": "01_08_fraud_resistant_vendor_payment_gateway.json",
+    "workflow": "workflows/01-finops/01_08_fraud_resistant_vendor_payment_gateway.json",
+    "documentation": "docs/workflows/01-08-fraud-resistant-vendor-payment-gateway.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Coupa",
+      "Fraud Database",
+      "SFTP / Banking Portal"
+    ],
+    "credentials": [
+      "Coupa API Credentials",
+      "Fraud Database API Credentials",
+      "SFTP / Banking Portal API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-09",
+    "slug": "automated-month-end-close-board-reporting",
+    "name": "Automated Month-End Close & Board Reporting",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "The month-end close process requires aggregating data, running complex variance calculations, and formatting board decks, taking days of manual accounting work.",
+    "businessOutcome": "Create a workflow that automates month-end close tasks: pulling trial balances from Xero, running variance analysis via Python script nodes, and generating a comprehensive Excel report distributed to the board via secure email.",
+    "originalFilename": "01_09_automated_month_end_close_board_reporting.json",
+    "workflow": "workflows/01-finops/01_09_automated_month_end_close_board_reporting.json",
+    "documentation": "docs/workflows/01-09-automated-month-end-close-board-reporting.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Xero",
+      "Python",
+      "Excel generation",
+      "Secure Email"
+    ],
+    "credentials": [
+      "Xero API Credentials",
+      "Python API Credentials",
+      "Excel generation API Credentials",
+      "Secure Email API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "01-10",
+    "slug": "headless-checkout-tax-liability-sync",
+    "name": "Headless Checkout Tax Liability Sync",
+    "category": "FinOps & Revenue",
+    "categorySlug": "01-finops",
+    "businessProblem": "Global tax compliance (nexus rules, VAT) is notoriously difficult. Syncing e-commerce tax calculations to the ERP often involves messy CSV uploads and data lags.",
+    "businessOutcome": "Build an automated tax calculation workflow that integrates Avalara with a custom headless checkout, handling complex nexus rules, and automatically syncing tax liability journals to the general ledger in Workday.",
+    "originalFilename": "01_10_headless_checkout_tax_liability_sync.json",
+    "workflow": "workflows/01-finops/01_10_headless_checkout_tax_liability_sync.json",
+    "documentation": "docs/workflows/01-10-headless-checkout-tax-liability-sync.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Avalara",
+      "Headless Checkout API",
+      "Workday"
+    ],
+    "credentials": [
+      "Avalara API Credentials",
+      "Headless Checkout API API Credentials",
+      "Workday API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-01",
+    "slug": "seamless-zero-touch-employee-onboarding",
+    "name": "Seamless Zero-Touch Employee Onboarding",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Onboarding requires coordinating accounts, hardware, and meetings across multiple disconnected systems, often leaving new hires waiting days for full access.",
+    "businessOutcome": "Design an automated onboarding workflow triggered by a DocuSign completion: create accounts in Okta, assign hardware in SnipeIT, provision Slack channels, schedule intro meetings via Calendly, and trigger a 30-60-90 day check-in sequence in Lattice.",
+    "originalFilename": "02_01_seamless_zero_touch_employee_onboarding.json",
+    "workflow": "workflows/02-hr/02_01_seamless_zero_touch_employee_onboarding.json",
+    "documentation": "docs/workflows/02-01-seamless-zero-touch-employee-onboarding.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "DocuSign",
+      "Okta",
+      "SnipeIT",
+      "Slack",
+      "Calendly",
+      "Lattice"
+    ],
+    "credentials": [
+      "DocuSign API Credentials",
+      "Okta API Credentials",
+      "SnipeIT API Credentials",
+      "Slack API Credentials",
+      "Calendly API Credentials",
+      "Lattice API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "02-02",
+    "slug": "secure-offboarding-data-leakage-prevention",
+    "name": "Secure Offboarding & Data Leakage Prevention",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Missed offboarding steps result in ex-employees retaining access to sensitive corporate data, creating severe security and compliance risks.",
+    "businessOutcome": "Build an offboarding automation that revokes Okta access, triggers a secure data wipe request to IT via Jira, calculates final PTO payout in Gusto, and sends a secure offboarding survey via Typeform, ensuring zero data leakage.",
+    "originalFilename": "02_02_secure_offboarding_data_leakage_prevention.json",
+    "workflow": "workflows/02-hr/02_02_secure_offboarding_data_leakage_prevention.json",
+    "documentation": "docs/workflows/02-02-secure-offboarding-data-leakage-prevention.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Okta",
+      "Jira",
+      "Gusto",
+      "Typeform"
+    ],
+    "credentials": [
+      "Okta API Credentials",
+      "Jira API Credentials",
+      "Gusto API Credentials",
+      "Typeform API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-03",
+    "slug": "automated-linkedin-talent-sourcing-screening",
+    "name": "Automated LinkedIn Talent Sourcing & Screening",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Recruiters spend too much time manually sourcing candidates, researching profiles, and coordinating initial calls, slowing down the hiring pipeline.",
+    "businessOutcome": "Create a workflow that scrapes LinkedIn for specific skill sets, enriches candidate profiles via Clearbit, scores them using a custom AI prompt, and automatically schedules initial screening calls via Calendly for top 10% matches.",
+    "originalFilename": "02_03_automated_linkedin_talent_sourcing_screening.json",
+    "workflow": "workflows/02-hr/02_03_automated_linkedin_talent_sourcing_screening.json",
+    "documentation": "docs/workflows/02-03-automated-linkedin-talent-sourcing-screening.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "LinkedIn",
+      "Clearbit",
+      "AI",
+      "Calendly"
+    ],
+    "credentials": [
+      "LinkedIn API Credentials",
+      "Clearbit API Credentials",
+      "AI API Credentials",
+      "Calendly API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-04",
+    "slug": "360-degree-performance-review-aggregation",
+    "name": "360-Degree Performance Review Aggregation",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Performance reviews require managers to hunt down data across HR systems and chat apps, making the process biased and incredibly time-consuming.",
+    "businessOutcome": "Design a performance review automation that pulls OKR completion data from Lattice, aggregates peer feedback from Slack (using sentiment analysis), and generates a draft performance summary for managers in Notion.",
+    "originalFilename": "02_04_360_degree_performance_review_aggregation.json",
+    "workflow": "workflows/02-hr/02_04_360_degree_performance_review_aggregation.json",
+    "documentation": "docs/workflows/02-04-360-degree-performance-review-aggregation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Lattice",
+      "Slack",
+      "Notion",
+      "Sentiment Analysis AI"
+    ],
+    "credentials": [
+      "Lattice API Credentials",
+      "Slack API Credentials",
+      "Notion API Credentials",
+      "Sentiment Analysis AI API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-05",
+    "slug": "proactive-employee-sentiment-churn-risk-alerting",
+    "name": "Proactive Employee Sentiment & Churn Risk Alerting",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "HR often finds out about low team morale or cultural issues too late, resulting in costly employee turnover that could have been prevented.",
+    "businessOutcome": "Build a workflow that monitors employee sentiment via weekly Culture Amp pulses; if sentiment drops below a threshold in a specific department, automatically alert the HRBP and schedule a focus group via Outlook.",
+    "originalFilename": "02_05_proactive_employee_sentiment_churn_risk_alerting.json",
+    "workflow": "workflows/02-hr/02_05_proactive_employee_sentiment_churn_risk_alerting.json",
+    "documentation": "docs/workflows/02-05-proactive-employee-sentiment-churn-risk-alerting.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Culture Amp",
+      "Outlook",
+      "Slack/Teams"
+    ],
+    "credentials": [
+      "Culture Amp API Credentials",
+      "Outlook API Credentials",
+      "Slack/Teams API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-06",
+    "slug": "automated-visa-relocation-compliance",
+    "name": "Automated Visa & Relocation Compliance",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Missing a visa or passport expiration date can result in illegal working statuses or halted relocations, exposing the company to massive legal fines.",
+    "businessOutcome": "Create an automated visa/relocation workflow that tracks passport expiration dates in BambooHR, triggers alerts 90 days out, generates required legal documents via PDFMonkey, and creates a tracking board in Asana.",
+    "originalFilename": "02_06_automated_visa_relocation_compliance.json",
+    "workflow": "workflows/02-hr/02_06_automated_visa_relocation_compliance.json",
+    "documentation": "docs/workflows/02-06-automated-visa-relocation-compliance.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "BambooHR",
+      "PDFMonkey",
+      "Asana"
+    ],
+    "credentials": [
+      "BambooHR API Credentials",
+      "PDFMonkey API Credentials",
+      "Asana API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-07",
+    "slug": "frictionless-internal-mobility-transfers",
+    "name": "Frictionless Internal Mobility & Transfers",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Internal job applications often bypass current managers or ignore historical performance data, causing internal friction and misaligned expectations.",
+    "businessOutcome": "Design a workflow that automates internal mobility: when an employee applies for an internal role via Workday, check their tenure and performance ratings, and automatically notify the hiring manager and current manager.",
+    "originalFilename": "02_07_frictionless_internal_mobility_transfers.json",
+    "workflow": "workflows/02-hr/02_07_frictionless_internal_mobility_transfers.json",
+    "documentation": "docs/workflows/02-07-frictionless-internal-mobility-transfers.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Workday",
+      "Email/Slack"
+    ],
+    "credentials": [
+      "Workday API Credentials",
+      "Email/Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-08",
+    "slug": "mandatory-compliance-training-enforcement",
+    "name": "Mandatory Compliance Training Enforcement",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Ensuring 100% compliance on mandatory training (like security or harassment) is difficult, and manual chasing by HR is ineffective.",
+    "businessOutcome": "Build an automated learning & development workflow that assigns mandatory compliance training in Docebo based on the employee's department and role, tracking completion and escalating to HR via Slack if overdue.",
+    "originalFilename": "02_08_mandatory_compliance_training_enforcement.json",
+    "workflow": "workflows/02-hr/02_08_mandatory_compliance_training_enforcement.json",
+    "documentation": "docs/workflows/02-08-mandatory-compliance-training-enforcement.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Docebo",
+      "Slack",
+      "HRIS (e.g., BambooHR)"
+    ],
+    "credentials": [
+      "Docebo API Credentials",
+      "Slack API Credentials",
+      "HRIS (e.g., BambooHR) API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-09",
+    "slug": "intelligent-interview-scheduling-prep",
+    "name": "Intelligent Interview Scheduling & Prep",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Interview coordination is the biggest bottleneck in hiring. Candidates drop off when scheduling takes too long, and interviewers often show up unprepared.",
+    "businessOutcome": "Create a workflow that integrates Greenhouse with Slack to automate interview scheduling: parse interviewer availability from Google Calendar, send custom booking links to candidates, and prep interviewers with candidate resumes.",
+    "originalFilename": "02_09_intelligent_interview_scheduling_prep.json",
+    "workflow": "workflows/02-hr/02_09_intelligent_interview_scheduling_prep.json",
+    "documentation": "docs/workflows/02-09-intelligent-interview-scheduling-prep.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Greenhouse",
+      "Slack",
+      "Google Calendar"
+    ],
+    "credentials": [
+      "Greenhouse API Credentials",
+      "Slack API Credentials",
+      "Google Calendar API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "02-10",
+    "slug": "pre-processing-payroll-anomaly-detection",
+    "name": "Pre-Processing Payroll Anomaly Detection",
+    "category": "HR & Talent",
+    "categorySlug": "02-hr",
+    "businessProblem": "Payroll mistakes (incorrect raises, wrong bank details) are catastrophic for employee trust and very difficult to reverse once processed.",
+    "businessOutcome": "Design a payroll anomaly detection workflow that compares current month payroll draft in ADP against the previous month, flagging any salary changes >5% or new bank accounts for manual HR review before processing.",
+    "originalFilename": "02_10_pre_processing_payroll_anomaly_detection.json",
+    "workflow": "workflows/02-hr/02_10_pre_processing_payroll_anomaly_detection.json",
+    "documentation": "docs/workflows/02-10-pre-processing-payroll-anomaly-detection.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "ADP",
+      "Approval System (Jira/Email)"
+    ],
+    "credentials": [
+      "ADP API Credentials",
+      "Approval System (Jira/Email) API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-01",
+    "slug": "predictive-inventory-po-generation",
+    "name": "Predictive Inventory PO Generation",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Manual inventory checks fail to account for seasonal sales velocity or supplier lead times, resulting in frequent stockouts or costly overstocking.",
+    "businessOutcome": "Build an n8n workflow that monitors inventory levels in Shopify, checks lead times in NetSuite, and automatically generates purchase orders in Coupa when stock hits the reorder point, factoring in seasonal velocity adjustments.",
+    "originalFilename": "03_01_predictive_inventory_po_generation.json",
+    "workflow": "workflows/03-supply-chain/03_01_predictive_inventory_po_generation.json",
+    "documentation": "docs/workflows/03-01-predictive-inventory-po-generation.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Shopify",
+      "NetSuite",
+      "Coupa"
+    ],
+    "credentials": [
+      "Shopify API Credentials",
+      "NetSuite API Credentials",
+      "Coupa API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "03-02",
+    "slug": "ocean-freight-delay-rerouting-automation",
+    "name": "Ocean Freight Delay & Rerouting Automation",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Supply chain delays cause downstream production halts. When shipping updates are missed, customer support and manufacturing teams are left in the dark.",
+    "businessOutcome": "Design a workflow that integrates with Flexport API to track ocean freight shipments; if a delay is detected, automatically update the ETA in Salesforce, notify the customer via SMS, and adjust production schedules in MRPeasy.",
+    "originalFilename": "03_02_ocean_freight_delay_rerouting_automation.json",
+    "workflow": "workflows/03-supply-chain/03_02_ocean_freight_delay_rerouting_automation.json",
+    "documentation": "docs/workflows/03-02-ocean-freight-delay-rerouting-automation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Flexport",
+      "Salesforce",
+      "SMS API",
+      "MRPeasy"
+    ],
+    "credentials": [
+      "Flexport API Credentials",
+      "Salesforce API Credentials",
+      "SMS API API Credentials",
+      "MRPeasy API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-03",
+    "slug": "automated-supplier-quality-scorecarding",
+    "name": "Automated Supplier Quality Scorecarding",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Evaluating supplier performance manually is time-consuming and subjective, making it difficult to hold vendors accountable for late deliveries or high defect rates.",
+    "businessOutcome": "Create an automated supplier scorecard workflow that pulls delivery on-time rates from the WMS, quality defect rates from QA logs, and calculates a monthly score, automatically downgrading suppliers in the ERP if score < 80.",
+    "originalFilename": "03_03_automated_supplier_quality_scorecarding.json",
+    "workflow": "workflows/03-supply-chain/03_03_automated_supplier_quality_scorecarding.json",
+    "documentation": "docs/workflows/03-03-automated-supplier-quality-scorecarding.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "WMS",
+      "QA Systems",
+      "ERP (e.g., SAP/Oracle)"
+    ],
+    "credentials": [
+      "WMS API Credentials",
+      "QA Systems API Credentials",
+      "ERP (e.g., SAP/Oracle) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-04",
+    "slug": "zero-touch-customs-documentation",
+    "name": "Zero-Touch Customs Documentation",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Generating commercial invoices, packing lists, and AES filings by hand delays international shipments and increases the risk of customs holds due to typos.",
+    "businessOutcome": "Build a workflow that automates customs documentation: when a commercial invoice is created in SAP, automatically generate a packing list, certificate of origin, and AES filing via API, attaching them to the shipment record.",
+    "originalFilename": "03_04_zero_touch_customs_documentation.json",
+    "workflow": "workflows/03-supply-chain/03_04_zero_touch_customs_documentation.json",
+    "documentation": "docs/workflows/03-04-zero-touch-customs-documentation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "SAP",
+      "Document Generation API",
+      "Customs API"
+    ],
+    "credentials": [
+      "SAP API Credentials",
+      "Document Generation API API Credentials",
+      "Customs API API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-05",
+    "slug": "weather-risk-supply-chain-mitigation",
+    "name": "Weather Risk Supply Chain Mitigation",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Severe weather events (hurricanes, snowstorms) disrupt shipping routes, but logistics teams often react only after the disruption has occurred.",
+    "businessOutcome": "Design a workflow that monitors weather APIs for severe conditions along key shipping routes; if a risk is detected, automatically trigger a rerouting evaluation workflow and alert the logistics control tower via Teams.",
+    "originalFilename": "03_05_weather_risk_supply_chain_mitigation.json",
+    "workflow": "workflows/03-supply-chain/03_05_weather_risk_supply_chain_mitigation.json",
+    "documentation": "docs/workflows/03-05-weather-risk-supply-chain-mitigation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Weather API",
+      "Logistics Software",
+      "MS Teams"
+    ],
+    "credentials": [
+      "Weather API API Credentials",
+      "Logistics Software API Credentials",
+      "MS Teams API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-06",
+    "slug": "ai-powered-rma-liquidation-routing",
+    "name": "AI-Powered RMA & Liquidation Routing",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Processing returns manually is a massive cost center. Inspecting returned items and deciding whether to refurbish or liquidate takes too much warehouse labor.",
+    "businessOutcome": "Create an automated returns processing workflow that ingests RMA requests, checks item condition via uploaded photos (AI vision), routes to refurbishment or liquidation in the WMS, and triggers the refund in Stripe.",
+    "originalFilename": "03_06_ai_powered_rma_liquidation_routing.json",
+    "workflow": "workflows/03-supply-chain/03_06_ai_powered_rma_liquidation_routing.json",
+    "documentation": "docs/workflows/03-06-ai-powered-rma-liquidation-routing.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Returns Portal",
+      "AI Vision",
+      "WMS",
+      "Stripe"
+    ],
+    "credentials": [
+      "Returns Portal API Credentials",
+      "AI Vision API Credentials",
+      "WMS API Credentials",
+      "Stripe API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-07",
+    "slug": "daily-3pl-to-erp-inventory-reconciliation",
+    "name": "Daily 3PL to ERP Inventory Reconciliation",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Discrepancies between the 3PL warehouse and the central ERP cause accounting nightmare and overselling issues.",
+    "businessOutcome": "Build a workflow that syncs 3PL warehouse data (ShipHero) with the ERP (Microsoft Dynamics), automatically reconciling daily inventory counts and flagging discrepancies >1% for physical cycle counts.",
+    "originalFilename": "03_07_daily_3pl_to_erp_inventory_reconciliation.json",
+    "workflow": "workflows/03-supply-chain/03_07_daily_3pl_to_erp_inventory_reconciliation.json",
+    "documentation": "docs/workflows/03-07-daily-3pl-to-erp-inventory-reconciliation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "ShipHero",
+      "Microsoft Dynamics"
+    ],
+    "credentials": [
+      "ShipHero API Credentials",
+      "Microsoft Dynamics API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-08",
+    "slug": "automated-freight-audit-payment",
+    "name": "Automated Freight Audit & Payment",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Carriers frequently overcharge due to complex rate matrices. Auditing freight bills manually takes hours and companies leave money on the table.",
+    "businessOutcome": "Design a workflow that automates freight audit and pay: ingest carrier invoices via email, parse PDFs, compare rates against the contract matrix in a database, and auto-approve or flag disputes for the logistics team.",
+    "originalFilename": "03_08_automated_freight_audit_payment.json",
+    "workflow": "workflows/03-supply-chain/03_08_automated_freight_audit_payment.json",
+    "documentation": "docs/workflows/03-08-automated-freight-audit-payment.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Email",
+      "PDF Parser",
+      "Database"
+    ],
+    "credentials": [
+      "Email API Credentials",
+      "PDF Parser API Credentials",
+      "Database API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-09",
+    "slug": "tier-1-supplier-risk-trigger",
+    "name": "Tier-1 Supplier Risk Trigger",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "If a critical supplier faces a natural disaster or financial trouble, the business needs to secure alternative stock immediately before competitors do.",
+    "businessOutcome": "Create a workflow that monitors supplier risk via API (e.g., Resilinc); if a tier-1 supplier reports a disruption, automatically identify affected SKUs in the ERP and trigger safety stock releases.",
+    "originalFilename": "03_09_tier_1_supplier_risk_trigger.json",
+    "workflow": "workflows/03-supply-chain/03_09_tier_1_supplier_risk_trigger.json",
+    "documentation": "docs/workflows/03-09-tier-1-supplier-risk-trigger.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Resilinc API",
+      "ERP"
+    ],
+    "credentials": [
+      "Resilinc API API Credentials",
+      "ERP API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "03-10",
+    "slug": "ai-driven-demand-planning",
+    "name": "AI-Driven Demand Planning",
+    "category": "Supply Chain & Logistics",
+    "categorySlug": "03-supply-chain",
+    "businessProblem": "Simple rolling averages fail to predict complex demand shifts, resulting in poor production scheduling and wasted manufacturing capacity.",
+    "businessOutcome": "Build an automated demand planning workflow that pulls historical sales from the POS, applies a time-series forecasting Python script, and outputs recommended production schedules to the manufacturing execution system (MES).",
+    "originalFilename": "03_10_ai_driven_demand_planning.json",
+    "workflow": "workflows/03-supply-chain/03_10_ai_driven_demand_planning.json",
+    "documentation": "docs/workflows/03-10-ai-driven-demand-planning.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "POS System",
+      "Python Scripting",
+      "MES"
+    ],
+    "credentials": [
+      "POS System API Credentials",
+      "Python Scripting API Credentials",
+      "MES API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-01",
+    "slug": "proactive-feature-drop-off-alerting",
+    "name": "Proactive Feature Drop-Off Alerting",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "CSMs are often blindsided by churn because they lack visibility into when a customer stops using a key sticky feature in the product.",
+    "businessOutcome": "Design a workflow that monitors product usage via Segment webhooks; if a key feature adoption drops by 20% week-over-week, automatically create a \"Health Score Drop\" task in Gainsight and alert the CSM via Slack.",
+    "originalFilename": "04_01_proactive_feature_drop_off_alerting.json",
+    "workflow": "workflows/04-customer-success/04_01_proactive_feature_drop_off_alerting.json",
+    "documentation": "docs/workflows/04-01-proactive-feature-drop-off-alerting.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Segment",
+      "Gainsight",
+      "Slack"
+    ],
+    "credentials": [
+      "Segment API Credentials",
+      "Gainsight API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-02",
+    "slug": "ai-driven-support-ticket-triage",
+    "name": "AI-Driven Support Ticket Triage",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "Support queues get clogged with low-priority or repetitive questions, delaying responses to critical P1 issues that impact major clients.",
+    "businessOutcome": "Build an automated ticket triage workflow: ingest Zendesk tickets, use AI to classify intent and sentiment, route P1 issues to PagerDuty, and auto-respond to P3 issues with relevant knowledge base articles.",
+    "originalFilename": "04_02_ai_driven_support_ticket_triage.json",
+    "workflow": "workflows/04-customer-success/04_02_ai_driven_support_ticket_triage.json",
+    "documentation": "docs/workflows/04-02-ai-driven-support-ticket-triage.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Zendesk",
+      "AI",
+      "PagerDuty"
+    ],
+    "credentials": [
+      "Zendesk API Credentials",
+      "AI API Credentials",
+      "PagerDuty API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "04-03",
+    "slug": "automated-qbr-deck-generation",
+    "name": "Automated QBR Deck Generation",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "CSMs spend hours every quarter manually compiling usage graphs and support metrics to build Quarterly Business Review (QBR) slide decks.",
+    "businessOutcome": "Create a workflow that automates QBR prep: pull usage metrics from Mixpanel, pull support ticket volume from Intercom, generate a slide deck via Google Slides API, and email it to the CSM.",
+    "originalFilename": "04_03_automated_qbr_deck_generation.json",
+    "workflow": "workflows/04-customer-success/04_03_automated_qbr_deck_generation.json",
+    "documentation": "docs/workflows/04-03-automated-qbr-deck-generation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Mixpanel",
+      "Intercom",
+      "Google Slides API",
+      "Email"
+    ],
+    "credentials": [
+      "Mixpanel API Credentials",
+      "Intercom API Credentials",
+      "Google Slides API API Credentials",
+      "Email API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-04",
+    "slug": "dynamic-churn-deflection",
+    "name": "Dynamic Churn Deflection",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "When a customer hits 'cancel', relying on them to reach out to support is a lost cause. You need immediate, personalized intervention to save the revenue.",
+    "businessOutcome": "Design a workflow that handles automated churn intervention: when a cancellation request is submitted in Stripe, trigger a workflow that offers a dynamic discount via email, and if accepted, updates the subscription and creates a retention win task in Salesforce.",
+    "originalFilename": "04_04_dynamic_churn_deflection.json",
+    "workflow": "workflows/04-customer-success/04_04_dynamic_churn_deflection.json",
+    "documentation": "docs/workflows/04-04-dynamic-churn-deflection.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Stripe",
+      "Email API",
+      "Salesforce"
+    ],
+    "credentials": [
+      "Stripe API Credentials",
+      "Email API API Credentials",
+      "Salesforce API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-05",
+    "slug": "community-forum-to-bug-tracker-sync",
+    "name": "Community Forum to Bug Tracker Sync",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "Bugs reported by users in public community forums get lost or ignored, leading to frustrated power users and unresolved software defects.",
+    "businessOutcome": "Build a workflow that monitors community forums (Discourse); if a user posts a bug, automatically create a Jira ticket, link it to the forum post, and notify the user when the Jira status changes to \"Resolved\".",
+    "originalFilename": "04_05_community_forum_to_bug_tracker_sync.json",
+    "workflow": "workflows/04-customer-success/04_05_community_forum_to_bug_tracker_sync.json",
+    "documentation": "docs/workflows/04-05-community-forum-to-bug-tracker-sync.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Discourse",
+      "Jira"
+    ],
+    "credentials": [
+      "Discourse API Credentials",
+      "Jira API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-06",
+    "slug": "intent-based-onboarding-sequences",
+    "name": "Intent-Based Onboarding Sequences",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "Sending generic, one-size-fits-all onboarding emails results in low engagement. Users only care about the features relevant to their specific use-case.",
+    "businessOutcome": "Create an automated onboarding email sequence workflow triggered by a welcome call completion in Chili Piper, dynamically adjusting the email content based on the user's selected use-case during the call.",
+    "originalFilename": "04_06_intent_based_onboarding_sequences.json",
+    "workflow": "workflows/04-customer-success/04_06_intent_based_onboarding_sequences.json",
+    "documentation": "docs/workflows/04-06-intent-based-onboarding-sequences.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Chili Piper",
+      "Marketing Automation (e.g., Marketo/HubSpot)"
+    ],
+    "credentials": [
+      "Chili Piper API Credentials",
+      "Marketing Automation (e.g., Marketo/HubSpot) API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-07",
+    "slug": "executive-csat-nps-correlation",
+    "name": "Executive CSAT/NPS Correlation",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "NPS scores exist in a silo. Executives need to know if the unhappy customers are your largest enterprise accounts or your lowest-tier users.",
+    "businessOutcome": "Design a workflow that aggregates NPS/CSAT scores from Delighted, cross-references them with the customer's ARR in Salesforce, and automatically generates a monthly executive summary report in Notion.",
+    "originalFilename": "04_07_executive_csat_nps_correlation.json",
+    "workflow": "workflows/04-customer-success/04_07_executive_csat_nps_correlation.json",
+    "documentation": "docs/workflows/04-07-executive-csat-nps-correlation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Delighted",
+      "Salesforce",
+      "Notion"
+    ],
+    "credentials": [
+      "Delighted API Credentials",
+      "Salesforce API Credentials",
+      "Notion API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-08",
+    "slug": "pre-breach-sla-escalation",
+    "name": "Pre-Breach SLA Escalation",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "By the time a support ticket breaches its SLA, the customer is already angry and contract penalties may apply. You need to act *before* the breach.",
+    "businessOutcome": "Build a workflow that automates SLA breach prevention: monitor ticket age in Freshdesk, and at 80% of SLA time, automatically escalate the ticket to a Tier 2 agent and notify the Support Manager via SMS.",
+    "originalFilename": "04_08_pre_breach_sla_escalation.json",
+    "workflow": "workflows/04-customer-success/04_08_pre_breach_sla_escalation.json",
+    "documentation": "docs/workflows/04-08-pre-breach-sla-escalation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Freshdesk",
+      "SMS API (Twilio)"
+    ],
+    "credentials": [
+      "Freshdesk API Credentials",
+      "SMS API (Twilio) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-09",
+    "slug": "account-health-slack-digest",
+    "name": "Account Health Slack Digest",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "The wider company (sales, product, leadership) rarely logs into Customer Success software, creating a blind spot for account risks and expansion opportunities.",
+    "businessOutcome": "Create a workflow that syncs customer health scores from Totango to Slack, posting a weekly \"Wins and Risks\" digest in the #customer-success channel, highlighting top expansions and at-risk accounts.",
+    "originalFilename": "04_09_account_health_slack_digest.json",
+    "workflow": "workflows/04-customer-success/04_09_account_health_slack_digest.json",
+    "documentation": "docs/workflows/04-09-account-health-slack-digest.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Totango",
+      "Slack"
+    ],
+    "credentials": [
+      "Totango API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "04-10",
+    "slug": "macro-update-propagation",
+    "name": "Macro-Update Propagation",
+    "category": "Customer Success",
+    "categorySlug": "04-customer-success",
+    "businessProblem": "When the product team releases a new feature, support agents are often left using outdated macros, providing incorrect information to users.",
+    "businessOutcome": "Design a workflow that automates macro-update propagation: when a product update is published in Productboard, automatically update the relevant macros in Zendesk and notify agents via a Slack digest.",
+    "originalFilename": "04_10_macro_update_propagation.json",
+    "workflow": "workflows/04-customer-success/04_10_macro_update_propagation.json",
+    "documentation": "docs/workflows/04-10-macro-update-propagation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Productboard",
+      "Zendesk",
+      "Slack"
+    ],
+    "credentials": [
+      "Productboard API Credentials",
+      "Zendesk API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-01",
+    "slug": "intelligent-lead-routing-scoring",
+    "name": "Intelligent Lead Routing & Scoring",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "High-value inbound leads get lost in round-robin queues or are assigned to the wrong reps, killing momentum and decreasing conversion rates.",
+    "businessOutcome": "Build an n8n workflow that automates lead routing: ingest form fills from WordPress, enrich via Clearbit, score using a custom algorithm, and route to the correct AE in Salesforce based on territory, industry, and company size.",
+    "originalFilename": "05_01_intelligent_lead_routing_scoring.json",
+    "workflow": "workflows/05-sales-crm/05_01_intelligent_lead_routing_scoring.json",
+    "documentation": "docs/workflows/05-01-intelligent-lead-routing-scoring.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "WordPress",
+      "Clearbit",
+      "Salesforce"
+    ],
+    "credentials": [
+      "WordPress API Credentials",
+      "Clearbit API Credentials",
+      "Salesforce API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "05-02",
+    "slug": "stale-deal-detection",
+    "name": "Stale Deal Detection",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "Sales reps hold onto dead opportunities to pad their pipelines, making revenue forecasting incredibly inaccurate for leadership.",
+    "businessOutcome": "Design a workflow that syncs email engagement data from Outreach/Salesloft to Salesforce, updating lead/contact activity timelines and triggering a \"Stale Deal\" alert if no engagement occurs in 14 days.",
+    "originalFilename": "05_02_stale_deal_detection.json",
+    "workflow": "workflows/05-sales-crm/05_02_stale_deal_detection.json",
+    "documentation": "docs/workflows/05-02-stale-deal-detection.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Outreach/Salesloft",
+      "Salesforce"
+    ],
+    "credentials": [
+      "Outreach/Salesloft API Credentials",
+      "Salesforce API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-03",
+    "slug": "zero-touch-cpq-provisioning",
+    "name": "Zero-Touch CPQ & Provisioning",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "Generating quotes manually introduces pricing errors, rogue discounting, and delays in getting the contract to the prospect while they are hot.",
+    "businessOutcome": "Create an automated CPQ workflow: when an Opportunity reaches \"Negotiation\" in Salesforce, automatically generate a quote in PandaDoc using dynamic pricing logic, and upon signature, update the Opportunity to \"Closed Won\" and trigger provisioning.",
+    "originalFilename": "05_03_zero_touch_cpq_provisioning.json",
+    "workflow": "workflows/05-sales-crm/05_03_zero_touch_cpq_provisioning.json",
+    "documentation": "docs/workflows/05-03-zero-touch-cpq-provisioning.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Salesforce",
+      "PandaDoc",
+      "Provisioning API"
+    ],
+    "credentials": [
+      "Salesforce API Credentials",
+      "PandaDoc API Credentials",
+      "Provisioning API API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-04",
+    "slug": "competitor-pricing-web-scraper",
+    "name": "Competitor Pricing Web Scraper",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "Competitors change pricing quietly. If sales enablement doesn't know, reps get blindsided on calls and lose deals to cheaper alternatives.",
+    "businessOutcome": "Build a workflow that monitors competitor pricing via web scraping; if a competitor changes pricing, automatically update the battle card in Highspot and notify the sales enablement team via Slack.",
+    "originalFilename": "05_04_competitor_pricing_web_scraper.json",
+    "workflow": "workflows/05-sales-crm/05_04_competitor_pricing_web_scraper.json",
+    "documentation": "docs/workflows/05-04-competitor-pricing-web-scraper.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Web Scraper",
+      "Highspot",
+      "Slack"
+    ],
+    "credentials": [
+      "Web Scraper API Credentials",
+      "Highspot API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "05-05",
+    "slug": "intent-based-lead-recycling",
+    "name": "Intent-Based Lead Recycling",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "SDRs discard \"Not Right Now\" leads, and marketing rarely nurtures them effectively. When those prospects are ready to buy months later, they go to a competitor.",
+    "businessOutcome": "Design a workflow that automates lead recycling: if an SDR marks a lead as \"Nurture\" in Salesforce, move it to a Marketo nurture track, and automatically re-assign it to an SDR if they download a high-intent asset 6 months later.",
+    "originalFilename": "05_05_intent_based_lead_recycling.json",
+    "workflow": "workflows/05-sales-crm/05_05_intent_based_lead_recycling.json",
+    "documentation": "docs/workflows/05-05-intent-based-lead-recycling.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Salesforce",
+      "Marketo"
+    ],
+    "credentials": [
+      "Salesforce API Credentials",
+      "Marketo API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-06",
+    "slug": "call-intelligence-sync",
+    "name": "Call Intelligence Sync",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "Sales reps hate writing notes in the CRM, resulting in missing context for Account Managers post-sale and poor handoffs.",
+    "businessOutcome": "Create a workflow that integrates Gong call recordings with Salesforce: transcribe the call, extract key objections and next steps via AI, and append a summary to the Opportunity notes and the related Account record.",
+    "originalFilename": "05_06_call_intelligence_sync.json",
+    "workflow": "workflows/05-sales-crm/05_06_call_intelligence_sync.json",
+    "documentation": "docs/workflows/05-06-call-intelligence-sync.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Gong",
+      "AI",
+      "Salesforce"
+    ],
+    "credentials": [
+      "Gong API Credentials",
+      "AI API Credentials",
+      "Salesforce API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-07",
+    "slug": "automated-territory-realignment",
+    "name": "Automated Territory Realignment",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "When a new rep is hired or territories are redrawn, Ops spends days manually exporting, mapping, and mass-updating account owners in the CRM.",
+    "businessOutcome": "Build an automated territory alignment workflow: when a new AE is hired, automatically reassign existing open opportunities and accounts in Salesforce based on the new geo/industry mapping, notifying affected reps.",
+    "originalFilename": "05_07_automated_territory_realignment.json",
+    "workflow": "workflows/05-sales-crm/05_07_automated_territory_realignment.json",
+    "documentation": "docs/workflows/05-07-automated-territory-realignment.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Salesforce",
+      "Email/Slack"
+    ],
+    "credentials": [
+      "Salesforce API Credentials",
+      "Email/Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-08",
+    "slug": "contextual-deal-desk-approvals",
+    "name": "Contextual Deal Desk Approvals",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "Discount approvals are requested in chaotic Slack threads. Leadership lacks visibility into how a 15% discount actually impacts the margin of the deal.",
+    "businessOutcome": "Design a workflow that automates deal desk approvals: when a discount >15% is applied in Salesforce, automatically route for approval via Slack/Teams, pulling margin data from the ERP to show impact, and updating the Opp upon approval.",
+    "originalFilename": "05_08_contextual_deal_desk_approvals.json",
+    "workflow": "workflows/05-sales-crm/05_08_contextual_deal_desk_approvals.json",
+    "documentation": "docs/workflows/05-08-contextual-deal-desk-approvals.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Salesforce",
+      "Slack/Teams",
+      "ERP (Margin Data)"
+    ],
+    "credentials": [
+      "Salesforce API Credentials",
+      "Slack/Teams API Credentials",
+      "ERP (Margin Data) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-09",
+    "slug": "bulletproof-activity-logging",
+    "name": "Bulletproof Activity Logging",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "Sales reps forget to log meetings in the CRM, making it impossible to measure activity metrics or understand what it takes to close a deal.",
+    "businessOutcome": "Create a workflow that syncs calendar data from Outlook to Salesforce, automatically logging meetings as \"Events\" and linking them to the relevant Opportunity and Contacts, ensuring 100% activity logging compliance.",
+    "originalFilename": "05_09_bulletproof_activity_logging.json",
+    "workflow": "workflows/05-sales-crm/05_09_bulletproof_activity_logging.json",
+    "documentation": "docs/workflows/05-09-bulletproof-activity-logging.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Outlook",
+      "Salesforce"
+    ],
+    "credentials": [
+      "Outlook API Credentials",
+      "Salesforce API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "05-10",
+    "slug": "ai-driven-win-loss-analysis",
+    "name": "AI-Driven Win/Loss Analysis",
+    "category": "Sales & CRM",
+    "categorySlug": "05-sales-crm",
+    "businessProblem": "\"Price\" is the default reason reps choose when they lose a deal. True win/loss analysis requires candid feedback from the prospect themselves.",
+    "businessOutcome": "Build a workflow that automates win/loss analysis: when an Opp is Closed Lost, trigger a Typeform survey; upon submission, parse the feedback, categorize the loss reason, and update a custom \"Loss Reason\" object in Salesforce for reporting.",
+    "originalFilename": "05_10_ai_driven_win_loss_analysis.json",
+    "workflow": "workflows/05-sales-crm/05_10_ai_driven_win_loss_analysis.json",
+    "documentation": "docs/workflows/05-10-ai-driven-win-loss-analysis.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Salesforce",
+      "Typeform",
+      "AI Parser"
+    ],
+    "credentials": [
+      "Salesforce API Credentials",
+      "Typeform API Credentials",
+      "AI Parser API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-01",
+    "slug": "zero-touch-incident-war-room-creation",
+    "name": "Zero-Touch Incident War Room Creation",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "When an outage occurs, engineers waste the first 15 critical minutes manually creating Jira tickets, spinning up Slack channels, and digging through PagerDuty schedules to find who is on-call.",
+    "businessOutcome": "Design an n8n workflow that automates incident response: when a PagerDuty alert fires, automatically create a Jira incident, spin up a dedicated Slack war room, page the on-call engineer, and start a timer for SLA tracking.",
+    "originalFilename": "06_01_zero_touch_incident_war_room_creation.json",
+    "workflow": "workflows/06-itsm-devops/06_01_zero_touch_incident_war_room_creation.json",
+    "documentation": "docs/workflows/06-01-zero-touch-incident-war-room-creation.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "PagerDuty",
+      "Jira",
+      "Slack"
+    ],
+    "credentials": [
+      "PagerDuty API Credentials",
+      "Jira API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "06-02",
+    "slug": "automated-role-based-access-provisioning",
+    "name": "Automated Role-Based Access Provisioning",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "IT helpdesks get bogged down manually granting software licenses based on ServiceNow tickets, slowing down employee productivity and risking over-provisioning.",
+    "businessOutcome": "Build a workflow that automates employee access requests: ingest requests from ServiceNow, check the user's role in Okta, automatically provision standard access, and route non-standard access to the data owner for approval.",
+    "originalFilename": "06_02_automated_role_based_access_provisioning.json",
+    "workflow": "workflows/06-itsm-devops/06_02_automated_role_based_access_provisioning.json",
+    "documentation": "docs/workflows/06-02-automated-role-based-access-provisioning.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "ServiceNow",
+      "Okta",
+      "Software APIs"
+    ],
+    "credentials": [
+      "ServiceNow API Credentials",
+      "Okta API Credentials",
+      "Software APIs API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-03",
+    "slug": "ai-assisted-ci-cd-failure-triage",
+    "name": "AI-Assisted CI/CD Failure Triage",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "When a build fails in CI/CD, developers spend hours digging through massive error logs just to find a simple missing dependency or syntax error.",
+    "businessOutcome": "Create an automated CI/CD notification workflow: when a GitHub Actions build fails, parse the error logs, use AI to suggest a fix, post the summary to the #dev-ops Slack channel, and assign a Jira bug to the commit author.",
+    "originalFilename": "06_03_ai_assisted_ci_cd_failure_triage.json",
+    "workflow": "workflows/06-itsm-devops/06_03_ai_assisted_ci_cd_failure_triage.json",
+    "documentation": "docs/workflows/06-03-ai-assisted-ci-cd-failure-triage.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "GitHub Actions",
+      "AI",
+      "Slack",
+      "Jira"
+    ],
+    "credentials": [
+      "GitHub Actions API Credentials",
+      "AI API Credentials",
+      "Slack API Credentials",
+      "Jira API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "06-04",
+    "slug": "proactive-ssl-expiration-prevention",
+    "name": "Proactive SSL Expiration Prevention",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "Expired SSL certificates cause immediate customer-facing outages and security warnings, yet they are often tracked poorly in manual spreadsheets.",
+    "businessOutcome": "Design a workflow that monitors SSL certificates via API; if a certificate expires in <14 days, automatically create a high-priority Jira ticket, alert the DevOps team via PagerDuty, and update the status in Confluence.",
+    "originalFilename": "06_04_proactive_ssl_expiration_prevention.json",
+    "workflow": "workflows/06-itsm-devops/06_04_proactive_ssl_expiration_prevention.json",
+    "documentation": "docs/workflows/06-04-proactive-ssl-expiration-prevention.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "SSL Checker API",
+      "Jira",
+      "PagerDuty",
+      "Confluence"
+    ],
+    "credentials": [
+      "SSL Checker API API Credentials",
+      "Jira API Credentials",
+      "PagerDuty API Credentials",
+      "Confluence API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-05",
+    "slug": "self-healing-database-backup-verification",
+    "name": "Self-Healing Database Backup Verification",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "Backups are scheduled, but rarely tested. A corrupted backup is useless during a ransomware attack or data loss event.",
+    "businessOutcome": "Build a workflow that automates database backup verification: trigger a daily backup in AWS RDS, run a checksum validation script, and if it fails, automatically restore from the last known good backup and alert the DBA.",
+    "originalFilename": "06_05_self_healing_database_backup_verification.json",
+    "workflow": "workflows/06-itsm-devops/06_05_self_healing_database_backup_verification.json",
+    "documentation": "docs/workflows/06-05-self-healing-database-backup-verification.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "AWS RDS",
+      "Checksum Script",
+      "Alerting (Slack/Email)"
+    ],
+    "credentials": [
+      "AWS RDS API Credentials",
+      "Checksum Script API Credentials",
+      "Alerting (Slack/Email) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-06",
+    "slug": "cmdb-aware-vulnerability-routing",
+    "name": "CMDB-Aware Vulnerability Routing",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "Security scanners (like Qualys) dump thousands of vulnerabilities, but security teams don't know who owns the vulnerable asset to route the fix to.",
+    "businessOutcome": "Create an automated vulnerability management workflow: ingest scan results from Qualys, cross-reference with the CMDB in ServiceNow to identify the asset owner, and automatically create remediation tickets based on CVSS severity.",
+    "originalFilename": "06_06_cmdb_aware_vulnerability_routing.json",
+    "workflow": "workflows/06-itsm-devops/06_06_cmdb_aware_vulnerability_routing.json",
+    "documentation": "docs/workflows/06-06-cmdb-aware-vulnerability-routing.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Qualys",
+      "ServiceNow CMDB",
+      "Ticketing System"
+    ],
+    "credentials": [
+      "Qualys API Credentials",
+      "ServiceNow CMDB API Credentials",
+      "Ticketing System API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-07",
+    "slug": "automated-non-prod-cloud-cost-optimization",
+    "name": "Automated Non-Prod Cloud Cost Optimization",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "Developers leave expensive dev/test environments running 24/7 over the weekend, driving up AWS/Azure bills unnecessarily.",
+    "businessOutcome": "Design a workflow that automates cloud cost optimization: pull AWS Compute Optimizer recommendations, automatically downsize dev/test instances during non-working hours via Lambda, and report savings in a weekly Slack digest.",
+    "originalFilename": "06_07_automated_non_prod_cloud_cost_optimization.json",
+    "workflow": "workflows/06-itsm-devops/06_07_automated_non_prod_cloud_cost_optimization.json",
+    "documentation": "docs/workflows/06-07-automated-non-prod-cloud-cost-optimization.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "AWS Compute Optimizer",
+      "AWS Lambda",
+      "Slack"
+    ],
+    "credentials": [
+      "AWS Compute Optimizer API Credentials",
+      "AWS Lambda API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-08",
+    "slug": "secure-slackbot-password-resets",
+    "name": "Secure Slackbot Password Resets",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "\"I forgot my password\" is the #1 IT support ticket, consuming massive amounts of Level 1 helpdesk time.",
+    "businessOutcome": "Build a workflow that handles automated password resets: ingest requests via Slackbot, verify identity via Okta MFA prompt, reset the password in Active Directory, and send the temporary password via secure email.",
+    "originalFilename": "06_08_secure_slackbot_password_resets.json",
+    "workflow": "workflows/06-itsm-devops/06_08_secure_slackbot_password_resets.json",
+    "documentation": "docs/workflows/06-08-secure-slackbot-password-resets.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Slackbot",
+      "Okta MFA",
+      "Active Directory",
+      "Email"
+    ],
+    "credentials": [
+      "Slackbot API Credentials",
+      "Okta MFA API Credentials",
+      "Active Directory API Credentials",
+      "Email API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-09",
+    "slug": "digital-signature-release-approvals",
+    "name": "Digital Signature Release Approvals",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "CAB (Change Advisory Board) approvals are often a rubber-stamp process delayed by waiting for managers to log into the ITSM tool to hit \"Approve\".",
+    "businessOutcome": "Create a workflow that automates software deployment approvals: when a release is staged in Jenkins, automatically notify the change advisory board (CAB) via email with a link to the release notes, and proceed only upon digital signature.",
+    "originalFilename": "06_09_digital_signature_release_approvals.json",
+    "workflow": "workflows/06-itsm-devops/06_09_digital_signature_release_approvals.json",
+    "documentation": "docs/workflows/06-09-digital-signature-release-approvals.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Jenkins",
+      "Email",
+      "Digital Signature API"
+    ],
+    "credentials": [
+      "Jenkins API Credentials",
+      "Email API Credentials",
+      "Digital Signature API API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "06-10",
+    "slug": "zero-touch-mdm-hardware-provisioning",
+    "name": "Zero-Touch MDM Hardware Provisioning",
+    "category": "ITSM & DevOps",
+    "categorySlug": "06-itsm-devops",
+    "businessProblem": "Setting up a new laptop manually with corporate software takes hours of IT time per employee, delaying their Day 1 productivity.",
+    "businessOutcome": "Design a workflow that syncs hardware inventory: when a new laptop is scanned into SnipeIT, automatically create a user profile in Jamf, generate a pre-stage enrollment profile, and email the setup instructions to the employee.",
+    "originalFilename": "06_10_zero_touch_mdm_hardware_provisioning.json",
+    "workflow": "workflows/06-itsm-devops/06_10_zero_touch_mdm_hardware_provisioning.json",
+    "documentation": "docs/workflows/06-10-zero-touch-mdm-hardware-provisioning.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "SnipeIT",
+      "Jamf",
+      "Email"
+    ],
+    "credentials": [
+      "SnipeIT API Credentials",
+      "Jamf API Credentials",
+      "Email API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-01",
+    "slug": "end-to-end-webinar-operations",
+    "name": "End-to-End Webinar Operations",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Hosting a webinar requires manually syncing registrants between Zoom, Marketo, and Salesforce, often resulting in missed follow-ups and lost leads.",
+    "businessOutcome": "Build an n8n workflow that automates webinar operations: when a user registers in Zoom, add them to a Marketo nurture track, send a reminder sequence, and upon completion, push the attendance data to Salesforce and trigger a sales task.",
+    "originalFilename": "07_01_end_to_end_webinar_operations.json",
+    "workflow": "workflows/07-marketing/07_01_end_to_end_webinar_operations.json",
+    "documentation": "docs/workflows/07-01-end-to-end-webinar-operations.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Zoom",
+      "Marketo",
+      "Salesforce"
+    ],
+    "credentials": [
+      "Zoom API Credentials",
+      "Marketo API Credentials",
+      "Salesforce API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-02",
+    "slug": "ai-powered-content-syndication",
+    "name": "AI-Powered Content Syndication",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Writing a blog post is only half the battle. Distributing it across Medium, LinkedIn, and Twitter requires custom formatting and takes up valuable marketing time.",
+    "businessOutcome": "Design a workflow that automates content syndication: when a new blog post is published in WordPress, automatically format and push it to Medium, LinkedIn, and Twitter, using AI to generate platform-specific hooks and hashtags.",
+    "originalFilename": "07_02_ai_powered_content_syndication.json",
+    "workflow": "workflows/07-marketing/07_02_ai_powered_content_syndication.json",
+    "documentation": "docs/workflows/07-02-ai-powered-content-syndication.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "WordPress",
+      "Medium",
+      "LinkedIn",
+      "Twitter",
+      "AI"
+    ],
+    "credentials": [
+      "WordPress API Credentials",
+      "Medium API Credentials",
+      "LinkedIn API Credentials",
+      "Twitter API Credentials",
+      "AI API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "07-03",
+    "slug": "automated-ad-spend-pacing-pause",
+    "name": "Automated Ad Spend Pacing & Pause",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Marketing agencies and internal teams frequently overspend their budgets on Meta or Google Ads because daily pacing is tracked in manual spreadsheets.",
+    "businessOutcome": "Create an automated ad spend reconciliation workflow: pull daily spend from Meta Ads, Google Ads, and LinkedIn, compare it against the budget in a master sheet, and automatically pause campaigns in the ad platforms if pacing exceeds 110%.",
+    "originalFilename": "07_03_automated_ad_spend_pacing_pause.json",
+    "workflow": "workflows/07-marketing/07_03_automated_ad_spend_pacing_pause.json",
+    "documentation": "docs/workflows/07-03-automated-ad-spend-pacing-pause.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Meta Ads",
+      "Google Ads",
+      "LinkedIn Ads",
+      "Google Sheets"
+    ],
+    "credentials": [
+      "Meta Ads API Credentials",
+      "Google Ads API Credentials",
+      "LinkedIn Ads API Credentials",
+      "Google Sheets API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-04",
+    "slug": "frictionless-influencer-affiliate-payouts",
+    "name": "Frictionless Influencer & Affiliate Payouts",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Managing an affiliate program is great until month-end, when you have to calculate hundreds of micro-commissions and pay them out across different countries.",
+    "businessOutcome": "Build a workflow that automates influencer payouts: track affiliate link clicks and conversions via PartnerStack, calculate commissions, generate invoices via Xero, and trigger payouts via Stripe Connect.",
+    "originalFilename": "07_04_frictionless_influencer_affiliate_payouts.json",
+    "workflow": "workflows/07-marketing/07_04_frictionless_influencer_affiliate_payouts.json",
+    "documentation": "docs/workflows/07-04-frictionless-influencer-affiliate-payouts.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "PartnerStack",
+      "Xero",
+      "Stripe Connect"
+    ],
+    "credentials": [
+      "PartnerStack API Credentials",
+      "Xero API Credentials",
+      "Stripe Connect API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-05",
+    "slug": "instant-vip-brand-mention-triage",
+    "name": "Instant VIP Brand Mention Triage",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "By the time a PR team notices a high-profile influencer complaining about the brand on Twitter, the tweet has already gone viral.",
+    "businessOutcome": "Design a workflow that monitors brand mentions via Mention API; if a high-profile account mentions the brand, automatically alert the PR team via Slack and draft a response using AI based on brand guidelines.",
+    "originalFilename": "07_05_instant_vip_brand_mention_triage.json",
+    "workflow": "workflows/07-marketing/07_05_instant_vip_brand_mention_triage.json",
+    "documentation": "docs/workflows/07-05-instant-vip-brand-mention-triage.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Mention API",
+      "Slack",
+      "AI"
+    ],
+    "credentials": [
+      "Mention API API Credentials",
+      "Slack API Credentials",
+      "AI API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-06",
+    "slug": "automated-technical-seo-monitoring",
+    "name": "Automated Technical SEO Monitoring",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Developers deploy code changes that accidentally drop meta tags or create 404 loops, destroying SEO rankings before marketing even notices.",
+    "businessOutcome": "Create an automated SEO audit workflow: trigger a weekly crawl via Screaming Frog API, identify new 404s or dropped meta tags, and automatically create Jira tickets for the dev team to fix them.",
+    "originalFilename": "07_06_automated_technical_seo_monitoring.json",
+    "workflow": "workflows/07-marketing/07_06_automated_technical_seo_monitoring.json",
+    "documentation": "docs/workflows/07-06-automated-technical-seo-monitoring.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Screaming Frog API",
+      "Jira"
+    ],
+    "credentials": [
+      "Screaming Frog API API Credentials",
+      "Jira API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-07",
+    "slug": "speed-to-lead-ad-handoff",
+    "name": "Speed-to-Lead Ad Handoff",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Leads generated from Facebook or LinkedIn forms sit in a CSV file waiting to be downloaded, growing cold by the minute.",
+    "businessOutcome": "Build a workflow that automates lead handoff from ads: ingest form fills from Facebook Lead Ads, enrich via HubSpot, and if the lead meets the ICP, instantly notify the on-demand sales rep via SMS with a link to call the lead.",
+    "originalFilename": "07_07_speed_to_lead_ad_handoff.json",
+    "workflow": "workflows/07-marketing/07_07_speed_to_lead_ad_handoff.json",
+    "documentation": "docs/workflows/07-07-speed-to-lead-ad-handoff.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Facebook Lead Ads",
+      "HubSpot",
+      "SMS API"
+    ],
+    "credentials": [
+      "Facebook Lead Ads API Credentials",
+      "HubSpot API Credentials",
+      "SMS API API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-08",
+    "slug": "event-badge-scanner-to-crm-sync",
+    "name": "Event Badge Scanner to CRM Sync",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Sales reps collect hundreds of business cards at trade shows, but rarely enter them into the CRM promptly, killing post-event momentum.",
+    "businessOutcome": "Design a workflow that automates event follow-ups: scan business cards via a mobile app (OCR), push contacts to HubSpot, tag them with the event name, and trigger a personalized \"Great meeting you\" email sequence.",
+    "originalFilename": "07_08_event_badge_scanner_to_crm_sync.json",
+    "workflow": "workflows/07-marketing/07_08_event_badge_scanner_to_crm_sync.json",
+    "documentation": "docs/workflows/07-08-event-badge-scanner-to-crm-sync.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "OCR Scanner App",
+      "HubSpot",
+      "Email Sequence"
+    ],
+    "credentials": [
+      "OCR Scanner App API Credentials",
+      "HubSpot API Credentials",
+      "Email Sequence API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-09",
+    "slug": "statistical-a-b-test-decision-engine",
+    "name": "Statistical A/B Test Decision Engine",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Marketers often call an A/B test a \"winner\" too early without calculating true statistical significance, leading to poor CRO decisions.",
+    "businessOutcome": "Create a workflow that automates A/B test analysis: pull conversion data from Optimizely, run a statistical significance calculation via a Python node, and automatically declare a winner and push the winning variant to production.",
+    "originalFilename": "07_09_statistical_a_b_test_decision_engine.json",
+    "workflow": "workflows/07-marketing/07_09_statistical_a_b_test_decision_engine.json",
+    "documentation": "docs/workflows/07-09-statistical-a-b-test-decision-engine.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Optimizely",
+      "Python Scripting",
+      "CMS/Production System"
+    ],
+    "credentials": [
+      "Optimizely API Credentials",
+      "Python Scripting API Credentials",
+      "CMS/Production System API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "07-10",
+    "slug": "voice-of-customer-feedback-loop",
+    "name": "Voice of Customer Feedback Loop",
+    "category": "Marketing Operations",
+    "categorySlug": "07-marketing",
+    "businessProblem": "Marketing captures great user feedback in Intercom, but it never makes its way to the Product team's roadmap.",
+    "businessOutcome": "Build a workflow that syncs product feedback from Intercom to Productboard: use AI to summarize the feedback, tag the relevant feature, and update the Productboard status, which then syncs back to the user in Intercom.",
+    "originalFilename": "07_10_voice_of_customer_feedback_loop.json",
+    "workflow": "workflows/07-marketing/07_10_voice_of_customer_feedback_loop.json",
+    "documentation": "docs/workflows/07-10-voice-of-customer-feedback-loop.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Intercom",
+      "Productboard",
+      "AI"
+    ],
+    "credentials": [
+      "Intercom API Credentials",
+      "Productboard API Credentials",
+      "AI API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-01",
+    "slug": "zero-friction-mutual-nda-generation",
+    "name": "Zero-Friction Mutual NDA Generation",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Sales reps lose momentum when they have to wait days for the legal team to draft, review, and send a standard non-disclosure agreement.",
+    "businessOutcome": "Design an n8n workflow that automates NDA processing: when a request is submitted via a portal, generate a mutual NDA via PandaDoc, route for internal legal review, send to the counterparty, and upon signature, store in Contractify and alert the sales rep.",
+    "originalFilename": "08_01_zero_friction_mutual_nda_generation.json",
+    "workflow": "workflows/08-legal-compliance/08_01_zero_friction_mutual_nda_generation.json",
+    "documentation": "docs/workflows/08-01-zero-friction-mutual-nda-generation.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Internal Portal",
+      "PandaDoc",
+      "Contractify"
+    ],
+    "credentials": [
+      "Internal Portal API Credentials",
+      "PandaDoc API Credentials",
+      "Contractify API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": true,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "08-02",
+    "slug": "automated-regulatory-tracking-alerting",
+    "name": "Automated Regulatory Tracking & Alerting",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Compliance officers struggle to keep up with changing global data privacy laws (GDPR, CCPA), risking non-compliance fines.",
+    "businessOutcome": "Build a workflow that monitors regulatory changes via an API (e.g., Ascent); if a new GDPR directive is published, automatically create a compliance task in Jira, assign it to the DPO, and link relevant internal policies.",
+    "originalFilename": "08_02_automated_regulatory_tracking_alerting.json",
+    "workflow": "workflows/08-legal-compliance/08_02_automated_regulatory_tracking_alerting.json",
+    "documentation": "docs/workflows/08-02-automated-regulatory-tracking-alerting.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Ascent (or similar Regulatory API)",
+      "Jira"
+    ],
+    "credentials": [
+      "Ascent (or similar Regulatory API) API Credentials",
+      "Jira API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-03",
+    "slug": "omni-system-dsar-data-extraction",
+    "name": "Omni-System DSAR Data Extraction",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Executing a Data Subject Access Request (DSAR) requires IT to manually query databases, CRMs, and payment gateways, taking weeks to compile.",
+    "businessOutcome": "Create an automated data subject access request (DSAR) workflow: ingest requests via a secure form, verify identity, trigger data extraction scripts across Salesforce, Stripe, and AWS, compile into a secure ZIP, and deliver to the user.",
+    "originalFilename": "08_03_omni_system_dsar_data_extraction.json",
+    "workflow": "workflows/08-legal-compliance/08_03_omni_system_dsar_data_extraction.json",
+    "documentation": "docs/workflows/08-03-omni-system-dsar-data-extraction.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Secure Form",
+      "Salesforce",
+      "Stripe",
+      "AWS"
+    ],
+    "credentials": [
+      "Secure Form API Credentials",
+      "Salesforce API Credentials",
+      "Stripe API Credentials",
+      "AWS API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-04",
+    "slug": "third-party-vendor-risk-assessment",
+    "name": "Third-Party Vendor Risk Assessment",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Onboarding a new vendor without a proper security review exposes the company to supply-chain cyber attacks. Doing it manually slows down procurement.",
+    "businessOutcome": "Design a workflow that automates vendor risk assessments: when a new vendor is added to the ERP, trigger a Security Questionnaire via Teams; upon completion, score the risk, and if high, block the vendor in the ERP until remediated.",
+    "originalFilename": "08_04_third_party_vendor_risk_assessment.json",
+    "workflow": "workflows/08-legal-compliance/08_04_third_party_vendor_risk_assessment.json",
+    "documentation": "docs/workflows/08-04-third-party-vendor-risk-assessment.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "ERP",
+      "MS Teams / Forms",
+      "Risk Scoring Logic"
+    ],
+    "credentials": [
+      "ERP API Credentials",
+      "MS Teams / Forms API Credentials",
+      "Risk Scoring Logic API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-05",
+    "slug": "insider-threat-detection-lockout",
+    "name": "Insider Threat Detection & Lockout",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Disgruntled employees downloading gigabytes of proprietary data before leaving the company often goes unnoticed until the damage is done.",
+    "businessOutcome": "Build a workflow that monitors insider threat indicators: aggregate login anomalies from Okta and large data downloads from the DLP system; if a threshold is crossed, automatically lock the account and alert the CISO via PagerDuty.",
+    "originalFilename": "08_05_insider_threat_detection_lockout.json",
+    "workflow": "workflows/08-legal-compliance/08_05_insider_threat_detection_lockout.json",
+    "documentation": "docs/workflows/08-05-insider-threat-detection-lockout.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Okta",
+      "DLP System",
+      "PagerDuty"
+    ],
+    "credentials": [
+      "Okta API Credentials",
+      "DLP System API Credentials",
+      "PagerDuty API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-06",
+    "slug": "proactive-contract-renewal-management",
+    "name": "Proactive Contract Renewal Management",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Contracts auto-renew without renegotiation, or worse, expire without notice, leaving the business legally exposed or paying for unused software.",
+    "businessOutcome": "Create an automated contract renewal workflow: monitor contract end dates in Ironclad; at 90 days out, automatically notify the account owner, generate a renewal quote, and route for legal review.",
+    "originalFilename": "08_06_proactive_contract_renewal_management.json",
+    "workflow": "workflows/08-legal-compliance/08_06_proactive_contract_renewal_management.json",
+    "documentation": "docs/workflows/08-06-proactive-contract-renewal-management.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Ironclad",
+      "Quote Generator",
+      "Email/Slack"
+    ],
+    "credentials": [
+      "Ironclad API Credentials",
+      "Quote Generator API Credentials",
+      "Email/Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-07",
+    "slug": "continuous-soc2-evidence-collection",
+    "name": "Continuous SOC2 Evidence Collection",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Preparing for a SOC2 audit involves scrambling for weeks to manually pull access logs and system screenshots for auditors.",
+    "businessOutcome": "Design a workflow that automates SOC2 evidence collection: weekly, pull access logs from Okta, change logs from GitHub, and backup logs from AWS, compile them into a standardized folder structure, and upload to the audit portal (Vanta).",
+    "originalFilename": "08_07_continuous_soc2_evidence_collection.json",
+    "workflow": "workflows/08-legal-compliance/08_07_continuous_soc2_evidence_collection.json",
+    "documentation": "docs/workflows/08-07-continuous-soc2-evidence-collection.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Okta",
+      "GitHub",
+      "AWS",
+      "Vanta (or similar)"
+    ],
+    "credentials": [
+      "Okta API Credentials",
+      "GitHub API Credentials",
+      "AWS API Credentials",
+      "Vanta (or similar) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "08-08",
+    "slug": "automated-ip-infringement-takedowns",
+    "name": "Automated IP Infringement Takedowns",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Brand pirates steal trademarked images and logos across the web. Hunting them down and manually filing DMCA notices is an endless game of whack-a-mole.",
+    "businessOutcome": "Build a workflow that handles automated IP infringement takedowns: monitor the web for unauthorized use of trademarks via a brand protection API, automatically generate DMCA notices, and submit them to the hosting providers.",
+    "originalFilename": "08_08_automated_ip_infringement_takedowns.json",
+    "workflow": "workflows/08-legal-compliance/08_08_automated_ip_infringement_takedowns.json",
+    "documentation": "docs/workflows/08-08-automated-ip-infringement-takedowns.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Brand Protection API",
+      "DMCA Generator",
+      "Email API"
+    ],
+    "credentials": [
+      "Brand Protection API API Credentials",
+      "DMCA Generator API Credentials",
+      "Email API API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-09",
+    "slug": "background-conflict-of-interest-checks",
+    "name": "Background Conflict of Interest Checks",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "Employees may accidentally have side-gigs or previous employment with a direct competitor or active vendor, creating severe conflicts of interest.",
+    "businessOutcome": "Create a workflow that automates conflict of interest checks: when a new hire is onboarded, cross-reference their name and previous employers against a database of current clients and partners, flagging any overlaps for HR/Legal review.",
+    "originalFilename": "08_09_background_conflict_of_interest_checks.json",
+    "workflow": "workflows/08-legal-compliance/08_09_background_conflict_of_interest_checks.json",
+    "documentation": "docs/workflows/08-09-background-conflict-of-interest-checks.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "HRIS",
+      "CRM (Client Database)",
+      "Approval System"
+    ],
+    "credentials": [
+      "HRIS API Credentials",
+      "CRM (Client Database) API Credentials",
+      "Approval System API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "08-10",
+    "slug": "mandatory-policy-acknowledgment-tracking",
+    "name": "Mandatory Policy Acknowledgment Tracking",
+    "category": "Legal & Compliance",
+    "categorySlug": "08-legal-compliance",
+    "businessProblem": "When an employee handbook is updated, proving that all 1,000 employees actually read and signed the new policy is a logistical nightmare.",
+    "businessOutcome": "Design a workflow that automates policy acknowledgment: when an HR policy is updated in Gusto, automatically push it to all employees via Slack/Email, track acknowledgments, and escalate to managers for those who haven't signed in 7 days.",
+    "originalFilename": "08_10_mandatory_policy_acknowledgment_tracking.json",
+    "workflow": "workflows/08-legal-compliance/08_10_mandatory_policy_acknowledgment_tracking.json",
+    "documentation": "docs/workflows/08-10-mandatory-policy-acknowledgment-tracking.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Gusto",
+      "Slack/Email",
+      "Tracking Database"
+    ],
+    "credentials": [
+      "Gusto API Credentials",
+      "Slack/Email API Credentials",
+      "Tracking Database API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-01",
+    "slug": "self-healing-etl-pipeline-monitor",
+    "name": "Self-Healing ETL Pipeline Monitor",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "When an Airbyte or Fivetran sync fails silently, data engineers only find out days later when executives complain about stale dashboards.",
+    "businessOutcome": "Build an n8n workflow that automates ETL pipeline monitoring: listen for webhooks from Fivetran/Airbyte; if a sync fails, parse the error, restart the sync, and if it fails twice, page the data engineer via PagerDuty.",
+    "originalFilename": "09_01_self_healing_etl_pipeline_monitor.json",
+    "workflow": "workflows/09-data-engineering/09_01_self_healing_etl_pipeline_monitor.json",
+    "documentation": "docs/workflows/09-01-self-healing-etl-pipeline-monitor.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Fivetran/Airbyte Webhooks",
+      "PagerDuty"
+    ],
+    "credentials": [
+      "Fivetran/Airbyte Webhooks API Credentials",
+      "PagerDuty API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "09-02",
+    "slug": "automated-data-quality-circuit-breaker",
+    "name": "Automated Data Quality Circuit Breaker",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "Bad data ingested from upstream systems pollutes downstream BI reports. By the time it's noticed, the data warehouse is already corrupted.",
+    "businessOutcome": "Design a workflow that automates data quality checks: run a Great Expectations script via a webhook; if data quality drops below 99%, automatically halt downstream dbt models in Snowflake and alert the data team.",
+    "originalFilename": "09_02_automated_data_quality_circuit_breaker.json",
+    "workflow": "workflows/09-data-engineering/09_02_automated_data_quality_circuit_breaker.json",
+    "documentation": "docs/workflows/09-02-automated-data-quality-circuit-breaker.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "Great Expectations",
+      "dbt",
+      "Snowflake",
+      "Alerting API"
+    ],
+    "credentials": [
+      "Great Expectations API Credentials",
+      "dbt API Credentials",
+      "Snowflake API Credentials",
+      "Alerting API API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "09-03",
+    "slug": "auto-updating-data-dictionary",
+    "name": "Auto-Updating Data Dictionary",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "Data catalogs (like Atlan or Alation) go out of date instantly because engineers forget to document new schema columns.",
+    "businessOutcome": "Create an automated data dictionary update workflow: when a new column is added to a Snowflake table, automatically extract the metadata, use AI to generate a description, and push it to the data catalog (Atlan).",
+    "originalFilename": "09_03_auto_updating_data_dictionary.json",
+    "workflow": "workflows/09-data-engineering/09_03_auto_updating_data_dictionary.json",
+    "documentation": "docs/workflows/09-03-auto-updating-data-dictionary.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Snowflake",
+      "AI",
+      "Data Catalog (Atlan)"
+    ],
+    "credentials": [
+      "Snowflake API Credentials",
+      "AI API Credentials",
+      "Data Catalog (Atlan) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-04",
+    "slug": "statistical-dashboard-anomaly-detection",
+    "name": "Statistical Dashboard Anomaly Detection",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "Business owners don't look at dashboards every day. When a key metric crashes, it goes unnoticed unless a data analyst spots it manually.",
+    "businessOutcome": "Build a workflow that automates anomaly detection in dashboards: pull daily metrics from Looker; if a metric deviates >3 standard deviations from the 30-day mean, automatically generate a root-cause analysis prompt and email the data owner.",
+    "originalFilename": "09_04_statistical_dashboard_anomaly_detection.json",
+    "workflow": "workflows/09-data-engineering/09_04_statistical_dashboard_anomaly_detection.json",
+    "documentation": "docs/workflows/09-04-statistical-dashboard-anomaly-detection.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Looker",
+      "Statistical Scripting",
+      "Email/Slack"
+    ],
+    "credentials": [
+      "Looker API Credentials",
+      "Statistical Scripting API Credentials",
+      "Email/Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-05",
+    "slug": "dynamic-pii-masking-for-dev-environments",
+    "name": "Dynamic PII Masking for Dev Environments",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "Copying production databases to dev environments for testing often accidentally exposes sensitive customer PII to developers, causing massive compliance breaches.",
+    "businessOutcome": "Design a workflow that handles automated data masking: when a production database clone is requested for dev, automatically trigger a script to mask PII (names, emails, SSNs) before provisioning the database to the developer.",
+    "originalFilename": "09_05_dynamic_pii_masking_for_dev_environments.json",
+    "workflow": "workflows/09-data-engineering/09_05_dynamic_pii_masking_for_dev_environments.json",
+    "documentation": "docs/workflows/09-05-dynamic-pii-masking-for-dev-environments.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Database Cloning API",
+      "Masking Script"
+    ],
+    "credentials": [
+      "Database Cloning API API Credentials",
+      "Masking Script API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-06",
+    "slug": "automated-schema-evolution-handling",
+    "name": "Automated Schema Evolution Handling",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "When an upstream engineering team adds a field to a JSON payload, it breaks downstream Kafka consumers if the schema registry isn't updated.",
+    "businessOutcome": "Create a workflow that automates schema evolution: when a new JSON field is detected in an incoming Kafka topic, automatically update the Avro schema in the Schema Registry and notify the data engineers via Slack.",
+    "originalFilename": "09_06_automated_schema_evolution_handling.json",
+    "workflow": "workflows/09-data-engineering/09_06_automated_schema_evolution_handling.json",
+    "documentation": "docs/workflows/09-06-automated-schema-evolution-handling.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Kafka",
+      "Schema Registry",
+      "Slack"
+    ],
+    "credentials": [
+      "Kafka API Credentials",
+      "Schema Registry API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-07",
+    "slug": "bi-tool-data-health-digest",
+    "name": "BI Tool \"Data Health\" Digest",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "The data team has no idea which dashboards are actually being used by the business, leading to wasted compute costs refreshing abandoned reports.",
+    "businessOutcome": "Build a workflow that syncs BI tool metadata to Slack: every Monday, pull the most viewed dashboards from Tableau, the slowest running queries from Snowflake, and post a \"Data Health & Usage\" digest to the #data-team channel.",
+    "originalFilename": "09_07_bi_tool_data_health_digest.json",
+    "workflow": "workflows/09-data-engineering/09_07_bi_tool_data_health_digest.json",
+    "documentation": "docs/workflows/09-07-bi-tool-data-health-digest.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Tableau",
+      "Snowflake Metadata",
+      "Slack"
+    ],
+    "credentials": [
+      "Tableau API Credentials",
+      "Snowflake Metadata API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-08",
+    "slug": "automated-data-retention-archival",
+    "name": "Automated Data Retention & Archival",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "Keeping years of raw log data in a high-performance Snowflake warehouse costs a fortune. DBA teams rarely have time to clean up old tables manually.",
+    "businessOutcome": "Design a workflow that automates data retention policies: monthly, query Snowflake for tables older than X days, generate a drop/alter script, route it for DBA approval via Slack, and execute upon approval.",
+    "originalFilename": "09_08_automated_data_retention_archival.json",
+    "workflow": "workflows/09-data-engineering/09_08_automated_data_retention_archival.json",
+    "documentation": "docs/workflows/09-08-automated-data-retention-archival.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Snowflake",
+      "Slack"
+    ],
+    "credentials": [
+      "Snowflake API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-09",
+    "slug": "intelligent-api-rate-limit-handler",
+    "name": "Intelligent API Rate Limit Handler",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "Simple ETL scripts often crash because they hit rate limits on external APIs (like Shopify or Zendesk), requiring manual engineering intervention to restart.",
+    "businessOutcome": "Create a workflow that automates API rate limit handling: when an external API returns a 429 Too Many Requests, automatically parse the Retry-After header, pause the n8n workflow using a Wait node, and resume seamlessly.",
+    "originalFilename": "09_09_intelligent_api_rate_limit_handler.json",
+    "workflow": "workflows/09-data-engineering/09_09_intelligent_api_rate_limit_handler.json",
+    "documentation": "docs/workflows/09-09-intelligent-api-rate-limit-handler.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "External APIs",
+      "Wait Nodes (n8n)"
+    ],
+    "credentials": [
+      "External APIs API Credentials",
+      "Wait Nodes (n8n) API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "09-10",
+    "slug": "automated-data-lineage-mapping",
+    "name": "Automated Data Lineage Mapping",
+    "category": "Data Engineering",
+    "categorySlug": "09-data-engineering",
+    "businessProblem": "When a base table changes, data engineers have no way to know which downstream reports will break because documentation is completely siloed.",
+    "businessOutcome": "Build a workflow that automates data lineage mapping: parse SQL queries from the query warehouse (e.g., Databricks), extract table dependencies, and automatically update the lineage graph in the data catalog.",
+    "originalFilename": "09_10_automated_data_lineage_mapping.json",
+    "workflow": "workflows/09-data-engineering/09_10_automated_data_lineage_mapping.json",
+    "documentation": "docs/workflows/09-10-automated-data-lineage-mapping.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Databricks (Query History)",
+      "SQL Parser",
+      "Data Catalog"
+    ],
+    "credentials": [
+      "Databricks (Query History) API Credentials",
+      "SQL Parser API Credentials",
+      "Data Catalog API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-01",
+    "slug": "zero-touch-board-deck-assembly",
+    "name": "Zero-Touch Board Deck Assembly",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "The CEO and Chief of Staff spend a full week every quarter hunting down metrics across different departments to build the Board of Directors slide deck.",
+    "businessOutcome": "Design an n8n workflow that automates the Board of Directors deck creation: pull financial actuals from NetSuite, SaaS metrics from ChartMogul, and product roadmap from Jira, and automatically populate a master Google Slides template.",
+    "originalFilename": "10_01_zero_touch_board_deck_assembly.json",
+    "workflow": "workflows/10-executive/10_01_zero_touch_board_deck_assembly.json",
+    "documentation": "docs/workflows/10-01-zero-touch-board-deck-assembly.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "NetSuite",
+      "ChartMogul",
+      "Jira",
+      "Google Slides API"
+    ],
+    "credentials": [
+      "NetSuite API Credentials",
+      "ChartMogul API Credentials",
+      "Jira API Credentials",
+      "Google Slides API API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-02",
+    "slug": "automated-executive-okr-tracking",
+    "name": "Automated Executive OKR Tracking",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Department heads forget to update their OKRs. When leadership meets, half the data is stale, making strategic decision-making impossible.",
+    "businessOutcome": "Build a workflow that automates OKR tracking: bi-weekly, pull progress updates from Notion, calculate completion percentages, and automatically generate a \"Red/Yellow/Green\" status report for the executive team via email.",
+    "originalFilename": "10_02_automated_executive_okr_tracking.json",
+    "workflow": "workflows/10-executive/10_02_automated_executive_okr_tracking.json",
+    "documentation": "docs/workflows/10-02-automated-executive-okr-tracking.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Notion",
+      "Email",
+      "Reporting Logic"
+    ],
+    "credentials": [
+      "Notion API Credentials",
+      "Email API Credentials",
+      "Reporting Logic API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-03",
+    "slug": "the-ceo-morning-briefing-engine",
+    "name": "The \"CEO Morning Briefing\" Engine",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Executives are overwhelmed by notifications across 10 different apps. They need a single, concise snapshot of the business's health before they start their day.",
+    "businessOutcome": "Create an automated executive briefing workflow: every morning at 6 AM, aggregate top news via API, pull internal Slack highlights from #wins, summarize key metrics from the BI tool, and send a personalized morning digest to the CEO.",
+    "originalFilename": "10_03_the_ceo_morning_briefing_engine.json",
+    "workflow": "workflows/10-executive/10_03_the_ceo_morning_briefing_engine.json",
+    "documentation": "docs/workflows/10-03-the-ceo-morning-briefing-engine.md",
+    "maturity": "demo-verified",
+    "complexity": "advanced",
+    "trigger": "webhook",
+    "integrations": [
+      "News API",
+      "Slack",
+      "BI Tool (e.g., Looker)",
+      "Email/SMS"
+    ],
+    "credentials": [
+      "News API API Credentials",
+      "Slack API Credentials",
+      "BI Tool (e.g., Looker) API Credentials",
+      "Email/SMS API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": true,
+    "fixtureAvailable": true,
+    "verified": true
+  },
+  {
+    "id": "10-04",
+    "slug": "automated-m-a-virtual-data-room-setup",
+    "name": "Automated M&A Virtual Data Room Setup",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "During a merger or acquisition, standing up a secure data room and granting granular access to external lawyers and auditors is a massive administrative headache.",
+    "businessOutcome": "Design a workflow that automates M&A data room setup: when a new M&A project is initiated, automatically create a secure VDR (Virtual Data Room) in Firmroom, provision access for legal/finance, and trigger an indexing workflow for uploaded documents.",
+    "originalFilename": "10_04_automated_m_a_virtual_data_room_setup.json",
+    "workflow": "workflows/10-executive/10_04_automated_m_a_virtual_data_room_setup.json",
+    "documentation": "docs/workflows/10-04-automated-m-a-virtual-data-room-setup.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "VDR API (e.g., Firmroom)",
+      "Identity Provider"
+    ],
+    "credentials": [
+      "VDR API (e.g., Firmroom) API Credentials",
+      "Identity Provider API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-05",
+    "slug": "cross-departmental-sla-enforcer",
+    "name": "Cross-Departmental SLA Enforcer",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Sales blames CS for slow onboarding; CS blames Sales for poor handoffs. Without tracked SLAs between departments, the customer experience suffers.",
+    "businessOutcome": "Build a workflow that automates cross-departmental SLA tracking: monitor handoffs between Sales and CS in Salesforce; if the \"Time to Onboarding\" SLA is breached, automatically flag it in the weekly Ops review and deduct points from the rep's score.",
+    "originalFilename": "10_05_cross_departmental_sla_enforcer.json",
+    "workflow": "workflows/10-executive/10_05_cross_departmental_sla_enforcer.json",
+    "documentation": "docs/workflows/10-05-cross-departmental-sla-enforcer.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Salesforce",
+      "Ops Dashboard"
+    ],
+    "credentials": [
+      "Salesforce API Credentials",
+      "Ops Dashboard API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-06",
+    "slug": "intelligent-executive-travel-concierge",
+    "name": "Intelligent Executive Travel Concierge",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Executive Assistants waste hours cross-referencing calendars and booking portals to find flights that don't conflict with critical board meetings.",
+    "businessOutcome": "Create a workflow that automates executive travel booking: when an exec requests travel via a form, check their calendar for conflicts, find the best flights/hotels via API, present options via Slack, and book upon approval.",
+    "originalFilename": "10_06_intelligent_executive_travel_concierge.json",
+    "workflow": "workflows/10-executive/10_06_intelligent_executive_travel_concierge.json",
+    "documentation": "docs/workflows/10-06-intelligent-executive-travel-concierge.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "Form",
+      "Calendar API",
+      "Travel Booking API",
+      "Slack"
+    ],
+    "credentials": [
+      "Form API Credentials",
+      "Calendar API API Credentials",
+      "Travel Booking API API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-07",
+    "slug": "frictionless-qbr-preparation",
+    "name": "Frictionless QBR Preparation",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Quarterly Business Reviews for the executive team become messy because every department brings data formatted differently, making it hard to compare apples to apples.",
+    "businessOutcome": "Design a workflow that automates quarterly business review (QBR) prep for the exec team: aggregate departmental OKR completions, financial variance reports, and strategic initiative updates into a single Notion dashboard.",
+    "originalFilename": "10_07_frictionless_qbr_preparation.json",
+    "workflow": "workflows/10-executive/10_07_frictionless_qbr_preparation.json",
+    "documentation": "docs/workflows/10-07-frictionless-qbr-preparation.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Departmental Data Sources",
+      "Notion"
+    ],
+    "credentials": [
+      "Departmental Data Sources API Credentials",
+      "Notion API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": true,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-08",
+    "slug": "crisis-communication-broadcaster",
+    "name": "Crisis Communication Broadcaster",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "During a PR crisis or severe outage, coordinating the message across the status page, customer emails, and internal Slack takes too long, leading to confused customers.",
+    "businessOutcome": "Build a workflow that handles automated executive communication: when a critical incident occurs, automatically draft a status page update and a customer-facing email using AI, route for exec approval via Slack, and publish upon click.",
+    "originalFilename": "10_08_crisis_communication_broadcaster.json",
+    "workflow": "workflows/10-executive/10_08_crisis_communication_broadcaster.json",
+    "documentation": "docs/workflows/10-08-crisis-communication-broadcaster.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "intermediate",
+    "trigger": "webhook",
+    "integrations": [
+      "StatusPage",
+      "Email Marketing API",
+      "AI",
+      "Slack"
+    ],
+    "credentials": [
+      "StatusPage API Credentials",
+      "Email Marketing API API Credentials",
+      "AI API Credentials",
+      "Slack API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-09",
+    "slug": "zero-touch-cap-table-sync",
+    "name": "Zero-Touch Cap Table Sync",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Issuing new equity grants or SAFEs on Carta but failing to update the internal financial models leads to inaccurate dilution forecasts and unhappy investors.",
+    "businessOutcome": "Create a workflow that automates cap table management: when a new SAFE or equity grant is signed in Carta, automatically update the internal cap table spreadsheet, notify the CFO, and trigger a legal compliance check.",
+    "originalFilename": "10_09_zero_touch_cap_table_sync.json",
+    "workflow": "workflows/10-executive/10_09_zero_touch_cap_table_sync.json",
+    "documentation": "docs/workflows/10-09-zero-touch-cap-table-sync.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Carta",
+      "Spreadsheet",
+      "Notification System"
+    ],
+    "credentials": [
+      "Carta API Credentials",
+      "Spreadsheet API Credentials",
+      "Notification System API Credentials"
+    ],
+    "ai": true,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  },
+  {
+    "id": "10-10",
+    "slug": "automated-all-hands-meeting-production",
+    "name": "Automated All-Hands Meeting Production",
+    "category": "Executive Operations",
+    "categorySlug": "10-executive",
+    "businessProblem": "Producing a high-quality, monthly all-hands meeting requires gathering slides, writing scripts, and manually uploading the recording for employees who couldn't attend.",
+    "businessOutcome": "Design a workflow that automates the \"State of the Company\" all-hands meeting: aggregate video shoutouts from Slack, pull key metrics for the presentation, generate a running script for the CEO, and automatically distribute the recording and transcript post-meeting.",
+    "originalFilename": "10_10_automated_all_hands_meeting_production.json",
+    "workflow": "workflows/10-executive/10_10_automated_all_hands_meeting_production.json",
+    "documentation": "docs/workflows/10-10-automated-all-hands-meeting-production.md",
+    "maturity": "architecture-blueprint",
+    "complexity": "standard",
+    "trigger": "webhook",
+    "integrations": [
+      "Slack",
+      "Presentation API",
+      "Video Hosting API"
+    ],
+    "credentials": [
+      "Slack API Credentials",
+      "Presentation API API Credentials",
+      "Video Hosting API API Credentials"
+    ],
+    "ai": false,
+    "humanApproval": false,
+    "errorHandling": false,
+    "fixtureAvailable": false,
+    "verified": false
+  }
+]

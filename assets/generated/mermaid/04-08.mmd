@@ -1,0 +1,6 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Freshdesk["Freshdesk"]
+    N2_SMS_API__Twilio_["SMS API (Twilio)"]
+    N0_Webhook_Trigger --> N1_Freshdesk
+    N1_Freshdesk --> N2_SMS_API__Twilio_

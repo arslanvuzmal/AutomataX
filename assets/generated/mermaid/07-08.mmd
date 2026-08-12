@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_OCR_Scanner_App["OCR Scanner App"]
+    N2_HubSpot["HubSpot"]
+    N3_Email_Sequence["Email Sequence"]
+    N0_Webhook_Trigger --> N1_OCR_Scanner_App
+    N1_OCR_Scanner_App --> N2_HubSpot
+    N2_HubSpot --> N3_Email_Sequence

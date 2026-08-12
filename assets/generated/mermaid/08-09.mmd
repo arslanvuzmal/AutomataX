@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_HRIS["HRIS"]
+    N2_CRM__Client_Database_["CRM (Client Database)"]
+    N3_Approval_System["Approval System"]
+    N0_Webhook_Trigger --> N1_HRIS
+    N1_HRIS --> N2_CRM__Client_Database_
+    N2_CRM__Client_Database_ --> N3_Approval_System
