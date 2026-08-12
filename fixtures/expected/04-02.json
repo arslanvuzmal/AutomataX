@@ -1,0 +1,8 @@
+{
+  "ai_sentiment": "Negative/Urgent",
+  "ai_category": "Infrastructure Failure",
+  "calculated_priority": "P1_CRITICAL",
+  "assigned_team": "DevOps Escalation",
+  "sla_deadline": "2026-08-12T23:17:41Z",
+  "pagerduty_triggered": true
+}

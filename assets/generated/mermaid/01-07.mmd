@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Etherscan_API["Etherscan API"]
+    N2_Notion["Notion"]
+    N3_PagerDuty["PagerDuty"]
+    N0_Webhook_Trigger --> N1_Etherscan_API
+    N1_Etherscan_API --> N2_Notion
+    N2_Notion --> N3_PagerDuty

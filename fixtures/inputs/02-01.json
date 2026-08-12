@@ -1,0 +1,9 @@
+{
+  "employee_id": "EMP-5049",
+  "full_name": "Alex Morgan",
+  "role": "Senior Cloud Architect",
+  "department": "Engineering",
+  "start_date": "2026-09-01",
+  "manager_email": "cto@company.internal",
+  "personal_email": "alex.m@example.org"
+}

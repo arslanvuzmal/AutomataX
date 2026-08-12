@@ -1,0 +1,7 @@
+{
+  "scraped_price_usd": 149,
+  "price_change_detected": true,
+  "variance_percent": -25.1,
+  "alert_channel": "#sales-intelligence",
+  "status": "COMPETITOR_PRICE_DROP_ALERTED"
+}

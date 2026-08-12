@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Segment["Segment"]
+    N2_Gainsight["Gainsight"]
+    N3_Slack["Slack"]
+    N0_Webhook_Trigger --> N1_Segment
+    N1_Segment --> N2_Gainsight
+    N2_Gainsight --> N3_Slack

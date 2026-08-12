@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Email["Email"]
+    N2_PDF_Parser["PDF Parser"]
+    N3_Database["Database"]
+    N0_Webhook_Trigger --> N1_Email
+    N1_Email --> N2_PDF_Parser
+    N2_PDF_Parser --> N3_Database

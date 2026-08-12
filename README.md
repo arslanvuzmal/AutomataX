@@ -1,90 +1,199 @@
-# 🚀 n8n.automation | Enterprise-Grade Automation Workflows
+# AutomataX — 100 Business Automation Architectures for n8n
 
-[![Build Status](https://github.com/avuzmal/n8n.automation/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/avuzmal/n8n.automation/actions)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![n8n Version](https://img.shields.io/badge/n8n-v1.0%2B-blue.svg)
+![AutomataX Hero Banner](./assets/brand/automatax-hero.svg)
 
-Welcome to **n8n.automation**, a curated repository of **100 fully-built, ready-to-import n8n workflows**. This library is designed to solve complex, enterprise-level business problems out of the box.
+[![Build Status](https://github.com/arslanvuzmal/AutomataX/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arslanvuzmal/AutomataX/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![n8n Version](https://img.shields.io/badge/n8n-v1.0%2B-58A6FF.svg)](https://n8n.io)
+[![Workflows](https://img.shields.io/badge/Workflows-100-3FB950.svg)](./catalog/README.md)
+[![Domains](https://img.shields.io/badge/Domains-10-A371F7.svg)](./catalog/README.md)
+[![Manifest Version](https://img.shields.io/badge/Manifest-v2.0-blue.svg)](./manifest/workflows.json)
 
-Whether you are an automation agency, a freelancer, or an enterprise architect, this repository gives you an instant portfolio of high-value solutions to pitch and deploy to your clients.
-
----
-
-## 📑 Table of Contents
-- [Architecture Overview](#-architecture-overview)
-- [Directory of Automations](#-directory-of-automations)
-- [How to Import Workflows](#-how-to-import-workflows)
-- [Repository Structure](#-repository-structure)
-- [Contributing](#-contributing)
+**From business trigger to automated outcome.** AutomataX is an open-source library of 100 enterprise-grade business automation architectures engineered for n8n. Designed for automation agencies, freelancers, recruiters, n8n developers, and technical leaders evaluating automation systems quality.
 
 ---
 
-## 🏗 Architecture Overview
+## 📊 Project Statistics
 
-The repository is built to cleanly separate the business logic (briefs) from the technical implementation (JSON workflows). 
+- **100 Workflows** distributed across **10 Enterprise Domains**.
+- **100% Schema-Validated** via \`manifest/workflows.json\` source-of-truth.
+- **100 Visual Architecture SVGs** auto-derived from node graph structures.
+- **15 Demo-Verified Featured Workflows** equipped with safe test inputs and expected outcome fixtures.
+- **0 Plaintext Secrets** or hardcoded production credentials.
 
-```mermaid
-graph TD
-    A[n8n.automation Repo] --> B[/prompts/]
-    A --> C[/workflows/]
-    
-    B --> D[10 Category Markdown Files]
-    D --> E[100 Business Problem Briefs]
-    E --> F[Visual Integration Flowcharts]
-    
-    C --> G[100 Valid n8n JSON Files]
-    G -.->|Downloads & Maps to| E
+---
+
+## 🏗 Repository System Architecture
+
+![AutomataX Architecture Overview](./assets/brand/architecture-overview.svg)
+
+---
+
+## ⭐️ Featured Automations
+
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
+
+### 🎯 Intelligent Lead Routing & Scoring
+**Category:** Sales & CRM | **Trigger:** Webhook  
+**Outcome:** Ingests inbound leads, enriches via firmographic API, scores propensity to buy, routes high-value leads to enterprise AEs, and alerts Slack.  
+\`Webhook → Validate → Enrich → Score → Route → CRM → Notify\`  
+- **Complexity:** Advanced | **Maturity:** 🟢 Demo Verified  
+- **Integrations:** \`Salesforce\` · \`Clearbit\` · \`Slack\`  
+- [📄 Documentation](./docs/workflows/05-01-intelligent-lead-routing-scoring.md) | [📥 Workflow JSON](./workflows/05-sales-crm/05_01_intelligent_lead_routing_scoring.json) | [🖼 Visual](./assets/workflows/05-01/architecture.svg)
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 AI-Driven Support Ticket Triage
+**Category:** Customer Success | **Trigger:** Webhook  
+**Outcome:** Uses AI models to classify incoming Zendesk/Jira tickets, analyze sentiment, set priority SLAs, and trigger PagerDuty for critical outages.  
+\`Ticket Ingestion → AI Sentiment → SLA Calculation → Priority Route → Escalation\`  
+- **Complexity:** Advanced | **Maturity:** 🟢 Demo Verified  
+- **Integrations:** \`Zendesk\` · \`OpenAI\` · \`Jira\` · \`PagerDuty\`  
+- [📄 Documentation](./docs/workflows/04-02-ai-driven-support-ticket-triage.md) | [📥 Workflow JSON](./workflows/04-customer-success/04_02_ai_driven_support_ticket_triage.json) | [🖼 Visual](./assets/workflows/04-02/architecture.svg)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 💳 Intelligent Accounts Payable Automation
+**Category:** FinOps & Revenue | **Trigger:** Webhook  
+**Outcome:** Ingests email invoices, extracts line items via OCR, matches POs in Oracle, and routes for multi-tier signature approval in DocuSign.  
+\`Email Ingest → AWS Textract OCR → Oracle PO Match → DocuSign Approval\`  
+- **Complexity:** Advanced | **Maturity:** 🟢 Demo Verified  
+- **Integrations:** \`AWS Textract\` · \`Oracle ERP\` · \`DocuSign\`  
+- [📄 Documentation](./docs/workflows/01-03-intelligent-accounts-payable-automation.md) | [📥 Workflow JSON](./workflows/01-finops/01_03_intelligent_accounts_payable_automation.json) | [🖼 Visual](./assets/workflows/01-03/architecture.svg)
+
+</td>
+<td width="50%" valign="top">
+
+### 👔 CEO Morning Briefing Engine
+**Category:** Executive Operations | **Trigger:** Schedule  
+**Outcome:** Aggregates daily ARR, churn, open incidents, and executive OKRs into a single PDF summary delivered to executive inboxes at 07:00 AM.  
+\`Schedule → Query Stripe/Jira → Render PDF → Email Digest\`  
+- **Complexity:** Advanced | **Maturity:** 🟢 Demo Verified  
+- **Integrations:** \`Stripe\` · \`Jira\` · \`Documint\` · \`Email\`  
+- [📄 Documentation](./docs/workflows/10-03-the-ceo-morning-briefing-engine.md) | [📥 Workflow JSON](./workflows/10-executive/10_03_the_ceo_morning_briefing_engine.json) | [🖼 Visual](./assets/workflows/10-03/architecture.svg)
+
+</td>
+</tr>
+</table>
+
+👉 **[Explore all 100 Workflows in the Master Catalog](./catalog/README.md)**
+
+---
+
+## 🗂 Directory of Automations by Domain
+
+AutomataX divides 100 business automations into 10 enterprise domains.
+
+| Domain | Description | Workflows | Category Catalog |
+| :--- | :--- | :---: | :---: |
+| **01. FinOps & Revenue** | Revenue recognition, AP automation, budget monitoring, dunning. | 10 | [View FinOps](./catalog/finops.md) |
+| **02. HR & Talent** | Employee onboarding, offboarding, performance reviews, sentiment. | 10 | [View HR](./catalog/hr.md) |
+| **03. Supply Chain** | Predictive inventory POs, freight tracking, 3PL reconciliation. | 10 | [View Supply Chain](./catalog/supply-chain.md) |
+| **04. Customer Success** | Feature drop-off alerts, ticket triage, QBR prep, SLA escalations. | 10 | [View CS](./catalog/customer-success.md) |
+| **05. Sales & CRM** | Lead routing, CPQ, deal desk approvals, competitor price scraping. | 10 | [View Sales](./catalog/sales-crm.md) |
+| **06. ITSM & DevOps** | Incident war rooms, RBAC access, AI CI/CD failure triage. | 10 | [View DevOps](./catalog/itsm-devops.md) |
+| **07. Marketing Ops** | Webinar operations, ad spend pacing, content syndication. | 10 | [View Marketing](./catalog/marketing.md) |
+| **08. Legal & Compliance** | Mutual NDA generation, DSAR compliance, SOC 2 evidence collection. | 10 | [View Legal](./catalog/legal-compliance.md) |
+| **09. Data Engineering** | ETL pipeline monitoring, data circuit breakers, schema evolution. | 10 | [View Data Eng](./catalog/data-engineering.md) |
+| **10. Executive Ops** | Board deck assembly, M&A data rooms, CEO morning briefing. | 10 | [View Executive](./catalog/executive-operations.md) |
+
+---
+
+## 🏷 Workflow Maturity Model
+
+AutomataX strictly enforces a truthful 4-tier maturity system:
+
+- **Architecture Blueprint**: The workflow sequence is defined as an importable n8n graph structure. External integration parameters require configuration and API credential binding.
+- **Importable Template**: The workflow contains structured parameter expressions and credential placeholders, ready for environment binding.
+- **Demo Verified**: The workflow includes mock payload triggers, input fixtures (\`fixtures/inputs/\`), and expected output fixtures (\`fixtures/expected/\`) for offline testing without production API credentials.
+- **Production Reference**: The workflow contains full error handling workflows, exponential retries, rate limiting, PII masking, and real-world execution logs.
+
+---
+
+## 🚀 How to Import Workflows
+
+Importing an AutomataX workflow into your n8n workspace takes under 60 seconds:
+
+1. **Locate your Workflow**: Browse the [Catalog](./catalog/README.md) or domain subdirectories in \`workflows/\`.
+2. **Download JSON**: Click the **Download n8n JSON** link in the workflow's documentation page.
+3. **Import to n8n Canvas**:
+   - Open n8n workspace.
+   - Click **Workflows** → **Add Workflow**.
+   - Click **...** (Top-right menu) → **Import from File**.
+   - Select the downloaded \`.json\` file.
+4. **Bind Credentials**: Double-click integration nodes to select your stored n8n API Credentials.
+
+---
+
+## 🔒 Security & Credential Philosophy
+
+- **Zero Plaintext Secrets**: AutomataX workflows never contain raw API keys, passwords, or tokens.
+- **Credential Manager**: All integration nodes consume n8n's native Credential Manager (\`{{\$credentials...}}\`).
+- **Least Privilege**: Production deployments must scope API keys to the minimum necessary read/write capabilities.
+- **Sanitized Fixtures**: All demo test payloads utilize 100% fictional data.
+
+---
+
+## 🛠 Developer & Contribution Tools
+
+```bash
+# Validate repository integrity (JSON, manifest sync, links, secret scanning)
+npm test
+
+# Regenerate master manifest (manifest/workflows.json)
+npm run build:manifest
+
+# Regenerate all SVG architecture diagrams
+npm run generate:diagrams
+
+# Regenerate documentation pages & stats
+npm run generate:docs && npm run generate:stats
 ```
 
 ---
 
-## 📂 Directory of Automations
+## 📁 Repository Structure
 
-We've categorized 100 automated solutions across 10 critical enterprise domains. Click on any category below to view the business problems, explore the visual pipelines, and download the exact n8n JSON files.
-
-| Category | Description | Link |
-| :--- | :--- | :--- |
-| **01. FinOps & Revenue** | Multi-currency revenue recognition, AP workflows, subscription dunning. | [View Automations](./prompts/01_finops_and_revenue.md) |
-| **02. HR & Talent** | Automated onboarding, offboarding, performance reviews, internal mobility. | [View Automations](./prompts/02_hr_and_talent.md) |
-| **03. Supply Chain** | Inventory POs, freight tracking, supplier scorecards, demand planning. | [View Automations](./prompts/03_supply_chain_and_logistics.md) |
-| **04. Customer Success** | Product usage monitoring, ticket triage, QBR prep, churn intervention. | [View Automations](./prompts/04_customer_success.md) |
-| **05. Sales & CRM** | Lead routing, CPQ, deal desk approvals, competitor pricing alerts. | [View Automations](./prompts/05_sales_and_crm.md) |
-| **06. ITSM & DevOps** | Incident response, cloud cost optimization, vulnerability management. | [View Automations](./prompts/06_itsm_and_devops.md) |
-| **07. Marketing Ops** | Webinar operations, ad spend reconciliation, content syndication. | [View Automations](./prompts/07_marketing_operations.md) |
-| **08. Legal & Compliance** | NDA processing, DSAR workflows, vendor risk assessments. | [View Automations](./prompts/08_legal_and_compliance.md) |
-| **09. Data Engineering** | ETL pipeline monitoring, data dictionary updates, schema evolution. | [View Automations](./prompts/09_data_engineering.md) |
-| **10. Executive Ops** | Board deck creation, M&A data rooms, cap table management. | [View Automations](./prompts/10_executive_operations.md) |
-
----
-
-## 📖 How to Import Workflows
-
-Deploying these enterprise solutions to your own n8n instance takes less than 60 seconds.
-
-1. **Find your Workflow**: Browse the `/prompts` directory to find the business problem you want to solve.
-2. **Download the JSON**: Click the `📥 Download n8n JSON` link on the brief, or navigate to the `/workflows` directory and download the raw `.json` file.
-3. **Import to n8n**:
-   - Open your n8n workspace.
-   - Click **Add Workflow** (or go to the Workflows screen).
-   - Click the **...** (Options) menu in the top right of the canvas.
-   - Select **Import from File** and upload the downloaded `.json`.
-4. **Configure Credentials**: The nodes will automatically appear on the canvas perfectly connected! Double-click each integration node to add your specific API credentials.
-
----
-
-## 🏗 Repository Structure
-
-- **`/prompts`**: The master index of all 100 automations, complete with business briefs and visual architecture flowcharts.
-- **`/workflows`**: The 100 generated `.json` workflow files, ready for import into n8n.
-- **`/scripts`**: Internal Node.js scripts used in CI/CD to validate that all workflows are structurally sound.
-- **`.github/workflows`**: Automated GitHub Actions ensuring no malformed JSONs or exposed credentials are merged.
+```text
+AutomataX/
+├── assets/                  # Brand & visual architecture SVGs
+│   ├── brand/              # Hero & system architecture SVGs
+│   ├── catalog/            # Category architecture SVGs
+│   └── workflows/          # Individual per-workflow SVGs
+├── catalog/                 # Categorized catalog index pages
+├── docs/                    # Individual workflow spec docs & audit
+│   ├── workflows/          # 100 workflow specification pages
+│   └── AUDIT.md            # Technical repository audit report
+├── fixtures/                # Demo mode test payloads
+│   ├── inputs/             # Sample trigger input payloads
+│   └── expected/           # Expected output payloads
+├── manifest/                # Authoritative source of truth
+│   ├── workflows.json      # Master manifest index
+│   └── stats.json          # Repository statistics
+├── scripts/                 # Validation & generator scripts
+├── workflows/               # 10 Domain subdirectories containing 100 n8n JSONs
+│   ├── 01-finops/
+│   ├── 02-hr/
+│   └── ...
+├── .github/workflows/ci.yml # Automated CI/CD pipeline
+├── CONTRIBUTING.md          # Workflow contribution guide
+└── LICENSE                  # MIT License
+\`\`\`
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from the enterprise automation community! 
-Please read our [Contributing Guidelines](CONTRIBUTING.md) and our [Code of Conduct](CODE_OF_CONDUCT.md) before submitting a Pull Request.
+We welcome contributions! Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting pull requests.
 
 ---
-*Built for automation architects who build for the enterprise.*
+
+## 📄 License
+
+This repository is licensed under the [MIT License](LICENSE).

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D11" />
+      <stop offset="50%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#161B22" />
+    </linearGradient>
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" />
+      <stop offset="100%" stop-color="#A371F7" />
+    </linearGradient>
+    <marker id="hero-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#58A6FF" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#hero-bg)" rx="12" stroke="#30363D" stroke-width="1.5" />
+
+  <!-- Brand Title -->
+  <text x="50" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="#F0F6FC" letter-spacing="-0.5">AutomataX</text>
+  <text x="210" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#58A6FF">/ 100 BUSINESS AUTOMATION ARCHITECTURES FOR n8n</text>
+
+  <!-- Flowchart pipeline elements -->
+  <!-- 1. INPUTS -->
+  <g transform="translate(50, 110)">
+    <rect width="120" height="120" rx="10" fill="#161B22" stroke="#58A6FF" stroke-width="1.5" />
+    <text x="60" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#58A6FF">STAGE 01</text>
+    <text x="60" y="65" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#F0F6FC">INPUTS</text>
+    <text x="60" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#8B949E">Webhooks &amp; Events</text>
+  </g>
+
+  <path d="M 170 170 L 195 170" stroke="#58A6FF" stroke-width="2" marker-end="url(#hero-arrow)" />
+
+  <!-- 2. AUTOMATAX ENGINE -->
+  <g transform="translate(205, 95)">
+    <rect width="180" height="150" rx="12" fill="#161B22" stroke="url(#brand-grad)" stroke-width="2" />
+    <text x="90" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#A371F7">ORCHESTRATION ENGINE</text>
+    <text x="90" y="70" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#F0F6FC">AUTOMATAX</text>
+    <text x="90" y="92" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#58A6FF">Powered by n8n</text>
+    <text x="90" y="125" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#8B949E">10 Enterprise Domains</text>
+  </g>
+
+  <path d="M 385 170 L 410 170" stroke="#58A6FF" stroke-width="2" marker-end="url(#hero-arrow)" />
+
+  <!-- 3. VALIDATE -->
+  <g transform="translate(420, 110)">
+    <rect width="110" height="120" rx="10" fill="#161B22" stroke="#D29922" stroke-width="1.5" />
+    <text x="55" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#D29922">STAGE 02</text>
+    <text x="55" y="65" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#F0F6FC">VALIDATE</text>
+    <text x="55" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#8B949E">Schema &amp; PII</text>
+  </g>
+
+  <path d="M 530 170 L 550 170" stroke="#58A6FF" stroke-width="2" marker-end="url(#hero-arrow)" />
+
+  <!-- 4. ENRICH & DECIDE -->
+  <g transform="translate(560, 110)">
+    <rect width="120" height="120" rx="10" fill="#161B22" stroke="#A371F7" stroke-width="1.5" />
+    <text x="60" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#A371F7">STAGE 03</text>
+    <text x="60" y="65" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#F0F6FC">ENRICH/DECIDE</text>
+    <text x="60" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#8B949E">AI &amp; Business Rules</text>
+  </g>
+
+  <path d="M 680 170 L 700 170" stroke="#58A6FF" stroke-width="2" marker-end="url(#hero-arrow)" />
+
+  <!-- 5. ACT -->
+  <g transform="translate(710, 110)">
+    <rect width="110" height="120" rx="10" fill="#161B22" stroke="#3FB950" stroke-width="1.5" />
+    <text x="55" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#3FB950">STAGE 04</text>
+    <text x="55" y="65" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#F0F6FC">ACT &amp; SYNC</text>
+    <text x="55" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#8B949E">APIs &amp; Systems</text>
+  </g>
+
+  <path d="M 820 170 L 840 170" stroke="#58A6FF" stroke-width="2" marker-end="url(#hero-arrow)" />
+
+  <!-- 6. OBSERVE -->
+  <g transform="translate(850, 110)">
+    <rect width="100" height="120" rx="10" fill="#161B22" stroke="#79C0FF" stroke-width="1.5" />
+    <text x="50" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#79C0FF">STAGE 05</text>
+    <text x="50" y="65" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#F0F6FC">OBSERVE</text>
+    <text x="50" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#8B949E">Alerts &amp; Audit</text>
+  </g>
+
+  <!-- Footer caption -->
+  <text x="500" y="285" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#8B949E">FROM BUSINESS TRIGGER TO AUTOMATED OUTCOME</text>
+</svg>

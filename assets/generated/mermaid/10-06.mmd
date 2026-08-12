@@ -1,0 +1,10 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Form["Form"]
+    N2_Calendar_API["Calendar API"]
+    N3_Travel_Booking_API["Travel Booking API"]
+    N4_Slack["Slack"]
+    N0_Webhook_Trigger --> N1_Form
+    N1_Form --> N2_Calendar_API
+    N2_Calendar_API --> N3_Travel_Booking_API
+    N3_Travel_Booking_API --> N4_Slack

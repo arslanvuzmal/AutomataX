@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Docebo["Docebo"]
+    N2_Slack["Slack"]
+    N3_HRIS__e_g___BambooHR_["HRIS (e.g., BambooHR)"]
+    N0_Webhook_Trigger --> N1_Docebo
+    N1_Docebo --> N2_Slack
+    N2_Slack --> N3_HRIS__e_g___BambooHR_

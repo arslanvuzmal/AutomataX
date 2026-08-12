@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Slack["Slack"]
+    N2_Presentation_API["Presentation API"]
+    N3_Video_Hosting_API["Video Hosting API"]
+    N0_Webhook_Trigger --> N1_Slack
+    N1_Slack --> N2_Presentation_API
+    N2_Presentation_API --> N3_Video_Hosting_API

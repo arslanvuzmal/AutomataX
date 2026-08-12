@@ -1,13 +1,28 @@
-# Security Policy
+# 🔒 AutomataX Security Policy
 
-## Supported Versions
+## 🛡 Supported Versions
 
-Currently, we only apply security updates to the latest release of the `main` branch.
+Security updates and secret scanning are actively enforced on the `main` branch.
 
-## Reporting a Vulnerability
+| Version / Branch | Supported | Secret Scanning |
+| :--- | :---: | :---: |
+| `main` | ✅ Yes | Enforced via TruffleHog CI |
+| Legacy releases | ❌ No | Upgrade to `main` |
 
-If you discover a security vulnerability within this repository (e.g., a hardcoded credential slipped through, or a workflow contains malicious injection vectors), please do NOT report it by opening a public issue.
+---
 
-Instead, please send an email to the repository maintainer directly. We will ensure the issue is addressed promptly, the credential is rotated (if applicable), and the history is purged.
+## 🔒 Credential & Data Isolation Policy
 
-You can expect an acknowledgment within 24 hours.
+1. **Zero Secret Storage**: No real API keys, passwords, bearer tokens, or sensitive certificates may be committed to this repository.
+2. **n8n Credential Manager**: Workflows must consume credentials exclusively via n8n's Credential Store (`{{$credentials.credentialName.property}}`).
+3. **Environment Variables**: Dynamic parameters (e.g., webhook endpoints, hostnames) must consume process environment variables (`{{$env.VAR_NAME}}`).
+4. **PII Masking**: Fixture files in `fixtures/` contain 100% fictional mock data. Production workflows processing PII should implement masking before logging to external aggregators.
+
+---
+
+## 🚨 Reporting Vulnerabilities
+
+If you discover a security vulnerability or exposed key:
+
+- **Email Maintainer**: Report directly to `security@automatax.io` or open a private GitHub Security Advisory.
+- **Response Timeline**: Acknowledgments within 24 hours; fixes published within 72 hours.

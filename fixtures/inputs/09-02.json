@@ -1,0 +1,6 @@
+{
+  "table_name": "fact_monthly_revenue",
+  "record_count": 5000,
+  "null_percentage_customer_id": 12.4,
+  "data_timestamp": "2026-08-12"
+}

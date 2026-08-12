@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_SnipeIT["SnipeIT"]
+    N2_Jamf["Jamf"]
+    N3_Email["Email"]
+    N0_Webhook_Trigger --> N1_SnipeIT
+    N1_SnipeIT --> N2_Jamf
+    N2_Jamf --> N3_Email

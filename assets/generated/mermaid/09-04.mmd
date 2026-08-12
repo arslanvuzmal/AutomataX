@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_Looker["Looker"]
+    N2_Statistical_Scripting["Statistical Scripting"]
+    N3_Email_Slack["Email/Slack"]
+    N0_Webhook_Trigger --> N1_Looker
+    N1_Looker --> N2_Statistical_Scripting
+    N2_Statistical_Scripting --> N3_Email_Slack

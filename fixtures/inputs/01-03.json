@@ -1,0 +1,8 @@
+{
+  "invoice_number": "INV-2026-881",
+  "vendor": "Acme Logistics Corp",
+  "amount_usd": 8450,
+  "po_number": "PO-77412",
+  "due_date": "2026-09-01",
+  "pdf_url": "https://storage.internal/invoices/INV-2026-881.pdf"
+}

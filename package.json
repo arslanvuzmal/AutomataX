@@ -1,10 +1,40 @@
 {
-  "name": "n8n-automation-repo",
-  "version": "1.0.0",
-  "description": "Enterprise n8n workflows",
+  "name": "automatax",
+  "version": "2.0.0",
+  "description": "100 Business Automation Architectures for n8n",
+  "main": "manifest/workflows.json",
   "scripts": {
-    "test": "node scripts/validate_workflows.js"
+    "test": "node scripts/validate_all.js",
+    "validate": "node scripts/validate_all.js",
+    "build:manifest": "node scripts/build_manifest.js",
+    "generate:diagrams": "node scripts/generate-diagrams.js",
+    "generate:docs": "node scripts/generate_docs.js",
+    "generate:catalog": "node scripts/generate_catalog.js",
+    "generate:stats": "node scripts/generate_stats.js"
   },
-  "author": "",
-  "license": "MIT"
+  "keywords": [
+    "n8n",
+    "automation",
+    "workflow-automation",
+    "ai-automation",
+    "business-automation",
+    "n8n-workflows",
+    "n8n-templates",
+    "agents",
+    "api-integration",
+    "nocode",
+    "low-code",
+    "devops-automation",
+    "sales-automation"
+  ],
+  "author": "Arslan Vuzmal <https://github.com/arslanvuzmal>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arslanvuzmal/AutomataX.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arslanvuzmal/AutomataX/issues"
+  },
+  "homepage": "https://github.com/arslanvuzmal/AutomataX#readme"
 }

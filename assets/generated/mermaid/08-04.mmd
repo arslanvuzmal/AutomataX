@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_ERP["ERP"]
+    N2_MS_Teams___Forms["MS Teams / Forms"]
+    N3_Risk_Scoring_Logic["Risk Scoring Logic"]
+    N0_Webhook_Trigger --> N1_ERP
+    N1_ERP --> N2_MS_Teams___Forms
+    N2_MS_Teams___Forms --> N3_Risk_Scoring_Logic

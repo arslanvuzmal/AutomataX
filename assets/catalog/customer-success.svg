@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 180" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#0D1117" rx="8" stroke="#30363D" stroke-width="1" />
+  <text x="25" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#A371F7">AUTOMATAX CATALOG // CUSTOMER SUCCESS</text>
+  <text x="25" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#8B949E">10 Enterprise Workflow Architectures · n8n Compatible</text>
+  
+  <g transform="translate(25, 80)">
+    <rect width="120" height="65" rx="6" fill="#161B22" stroke="#A371F7" stroke-width="1" />
+    <text x="60" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#A371F7">TRIGGER</text>
+    <text x="60" y="45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#F0F6FC">Event / Webhook</text>
+  </g>
+  <path d="M 145 112 L 175 112" stroke="#58A6FF" stroke-width="1.5" />
+
+  <g transform="translate(175, 80)">
+    <rect width="140" height="65" rx="6" fill="#161B22" stroke="#A371F7" stroke-width="1" />
+    <text x="70" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#A371F7">PROCESSING</text>
+    <text x="70" y="45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#F0F6FC">Validation &amp; Rules</text>
+  </g>
+  <path d="M 315 112 L 345 112" stroke="#58A6FF" stroke-width="1.5" />
+
+  <g transform="translate(345, 80)">
+    <rect width="140" height="65" rx="6" fill="#161B22" stroke="#D29922" stroke-width="1" />
+    <text x="70" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#D29922">INTEGRATION</text>
+    <text x="70" y="45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#F0F6FC">SaaS / ERP / Cloud</text>
+  </g>
+  <path d="M 485 112 L 515 112" stroke="#58A6FF" stroke-width="1.5" />
+
+  <g transform="translate(515, 80)">
+    <rect width="120" height="65" rx="6" fill="#161B22" stroke="#3FB950" stroke-width="1" />
+    <text x="60" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#3FB950">OUTCOME</text>
+    <text x="60" y="45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#F0F6FC">Action &amp; Audit</text>
+  </g>
+</svg>

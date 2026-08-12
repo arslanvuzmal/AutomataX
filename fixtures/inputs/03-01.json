@@ -1,0 +1,8 @@
+{
+  "sku": "SKU-9921-X",
+  "item_name": "High-Capacity Lithium Cell B",
+  "current_inventory": 140,
+  "reorder_point": 250,
+  "lead_time_days": 14,
+  "avg_daily_demand": 18
+}

@@ -1,0 +1,8 @@
+graph LR
+    N0_Webhook_Trigger["Webhook Trigger"]
+    N1_SAP["SAP"]
+    N2_Document_Generation_API["Document Generation API"]
+    N3_Customs_API["Customs API"]
+    N0_Webhook_Trigger --> N1_SAP
+    N1_SAP --> N2_Document_Generation_API
+    N2_Document_Generation_API --> N3_Customs_API
