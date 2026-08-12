@@ -1,8 +1,8 @@
 # 🚀 n8n.automation | Enterprise-Grade Automation Workflows
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/avuzmal/n8n.automation/ci.yml?branch=main)
-![License](https://img.shields.io/github/license/avuzmal/n8n.automation)
-![n8n Version](https://img.shields.io/badge/n8n-v1.0+-blue)
+[![Build Status](https://github.com/avuzmal/n8n.automation/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/avuzmal/n8n.automation/actions)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![n8n Version](https://img.shields.io/badge/n8n-v1.0%2B-blue.svg)
 
 Welcome to **n8n.automation**, a curated repository of **100 fully-built, ready-to-import n8n workflows**. This library is designed to solve complex, enterprise-level business problems out of the box.
 
